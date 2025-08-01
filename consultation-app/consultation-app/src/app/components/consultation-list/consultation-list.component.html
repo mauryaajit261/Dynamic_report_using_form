@@ -1,0 +1,140 @@
+<div class="consultation-list">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        <div class="header-content">
+          <h1>Consultation Records</h1>
+          <button mat-raised-button color="primary" [routerLink]="['/form']">
+            <mat-icon>add</mat-icon> New Consultation
+          </button>
+        </div>
+      </mat-card-title>
+      <mat-card-subtitle>|| Om Sri Sairam ||</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <ng-container *ngIf="consultations$ | async as consultations; else loading">
+        <div *ngIf="consultations.length > 0" class="consultation-records">
+          <mat-accordion>
+            <mat-expansion-panel *ngFor="let consultation of consultations">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  {{ consultation.name }}
+                </mat-panel-title>
+                <mat-panel-description>
+                  {{ formatDate(consultation.date) }}
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+
+              <div class="consultation-details">
+                <div class="personal-info">
+                  <h3>Client Information</h3>
+                  <div class="info-grid">
+                    <div class="info-item">
+                      <label>Date:</label>
+                      <span>{{ formatDate(consultation.date) }}</span>
+                    </div>
+                    <div class="info-item">
+                      <label>Name:</label>
+                      <span>{{ consultation.name }}</span>
+                    </div>
+                    <div class="info-item">
+                      <label>Email:</label>
+                      <span>{{ consultation.email }}</span>
+                    </div>
+                  </div>
+
+                  <div class="full-width-info">
+                    <label>Address:</label>
+                    <p>{{ consultation.address }}</p>
+                    <p>Pincode: {{ consultation.pincode }}</p>
+                    <p>Contact No: {{ consultation.contactNo }}</p>
+                    <p>Date of Birth: {{ formatDate(consultation.dateOfBirth) }}</p>
+                  </div>
+                </div>
+
+                <div class="full-width-info">
+                  <h3>Additional Details</h3>
+
+             
+                
+                  <p><strong>Question:</strong> {{ consultation.questions }}</p>
+                  <p><strong>Problems:</strong> {{ consultation.problem }}</p>
+                  <p><strong>SahasaraChakra:</strong> {{ consultation.sahasaraChakra }}</p>
+                  <p><strong>AjnaChakra:</strong> {{ consultation.ajnaChakra }}</p>
+                  <p><strong>VishuddhaChakra:</strong> {{ consultation.vishuddhaChakra }}</p>
+                  <p><strong>AnahatChakra:</strong> {{ consultation.anahatChakra}}</p>
+                  <p><strong>ManipuraChakra:</strong> {{ consultation.manipuraChakra}}</p>
+                  <p><strong>SvaddhisthanaChakra:</strong> {{ consultation.svaddhisthanaChakra}}</p>
+                  <p><strong>MuldharaChakra:</strong> {{ consultation.muldharaChakra}}</p>
+                  <p><strong>AuraEnergy:</strong> {{ consultation.auraEnergy}}</p>
+                  <p><strong>BodyAuraPercentage:</strong> {{ consultation.bodyAuraPercentage}}</p>
+                  <p><strong>LuckyColor:</strong> {{ consultation.luckyColor}}</p>
+                  <p><strong>LuckyNumber:</strong> {{ consultation.luckyNumber}}</p>
+                  <p><strong>ColorToAvoid:</strong> {{ consultation.colorToAvoid}}</p>
+                  <p><strong>NumberToAvoid:</strong> {{ consultation.numberToAvoid}}</p>
+                  <p><strong>Personality:</strong> {{ consultation.personality}}</p>
+                  <p><strong>Gemstone:</strong> {{ consultation.gemstone}}</p>
+                  <p><strong>Crystal:</strong> {{ consultation.crystal}}</p>
+                  <p><strong>OorjaLiquid:</strong> {{ consultation.oorjaLiquid}}</p>
+                  <p><strong>Soap:</strong> {{ consultation.soap}}</p>
+                  <p><strong>Salt:</strong> {{ consultation.salt}}</p>
+                  <p><strong>AnyOther:</strong> {{ consultation.anyOther}}</p>
+                  <p><strong>ObservationsAndRemedies:</strong> {{ consultation.observationsAndRemedies}}</p>
+                </div>
+
+                <mat-divider></mat-divider>
+
+             
+
+                <div class="action-buttons">
+                  <button mat-raised-button color="primary" [routerLink]="['/form', consultation.id]" (click)="$event.stopPropagation()">
+                    <mat-icon>edit</mat-icon> Edit
+                  </button>
+                  <button mat-raised-button color="warn" (click)="deleteConsultation(consultation.id); $event.stopPropagation();">
+                    <mat-icon>delete</mat-icon> Delete
+                  </button>
+                  <button mat-raised-button color="primary" (click)="generateReportpdf(consultation); $event.stopPropagation()">
+                    <mat-icon>picture_as_pdf</mat-icon> Generate Report
+                  </button>
+                <!--  <button mat-raised-button color="accent" (click)="openEmailDialog(consultation); $event.stopPropagation()">
+                    <mat-icon>email</mat-icon> Send Report
+                  </button> -->
+                </div>
+              </div>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+        <div *ngIf="consultations.length === 0" class="no-records">
+          <p>No consultation records found. Create a new consultation from the form.</p>
+        </div>
+      </ng-container>
+
+      <ng-template #loading>
+        <div class="loading">
+          <p>Loading consultations...</p>
+        </div>
+      </ng-template>
+    </mat-card-content>
+
+    <mat-card-footer>
+      <p class="sanskrit-text">समस्ता: लोका: सुखिनो भवन्तु</p>
+    </mat-card-footer>
+  </mat-card>
+
+  <!-- Email Dialog -->
+  <mat-dialog-container *ngIf="showEmailDialog">
+    <h2 mat-dialog-title>Send Report via Email</h2>
+    <form (ngSubmit)="sendReport()">
+      <mat-form-field appearance="fill">
+        <mat-label>Recipient Email</mat-label>
+        <input matInput [(ngModel)]="recipientEmail" name="email" type="email" required>
+      </mat-form-field>
+
+      <div mat-dialog-actions>
+        <button mat-button (click)="cancelEmail()">Cancel</button>
+        <button mat-raised-button color="primary" type="submit">Send</button>
+      </div>
+    </form>
+  </mat-dialog-container>
+</div>

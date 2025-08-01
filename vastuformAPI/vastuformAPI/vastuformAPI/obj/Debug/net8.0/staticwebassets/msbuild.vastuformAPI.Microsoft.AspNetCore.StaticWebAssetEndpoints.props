@@ -1,0 +1,88 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/vastuformAPI/uploads/1f1f39c3-1535-41af-9cf2-2a496ed9a18a.6iuba6yfad.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\1f1f39c3-1535-41af-9cf2-2a496ed9a18a.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"6iuba6yfad"},{"Name":"integrity","Value":"sha256-LnF8YbZQ9klZNursT9bkD17rlFSnJCyF5TfxVaHGOy8="},{"Name":"label","Value":"_content/vastuformAPI/uploads/1f1f39c3-1535-41af-9cf2-2a496ed9a18a.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"319066"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022LnF8YbZQ9klZNursT9bkD17rlFSnJCyF5TfxVaHGOy8=\u0022"},{"Name":"Last-Modified","Value":"Tue, 22 Apr 2025 17:25:58 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/vastuformAPI/uploads/1f1f39c3-1535-41af-9cf2-2a496ed9a18a.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\1f1f39c3-1535-41af-9cf2-2a496ed9a18a.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-LnF8YbZQ9klZNursT9bkD17rlFSnJCyF5TfxVaHGOy8="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"319066"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022LnF8YbZQ9klZNursT9bkD17rlFSnJCyF5TfxVaHGOy8=\u0022"},{"Name":"Last-Modified","Value":"Tue, 22 Apr 2025 17:25:58 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/vastuformAPI/uploads/3f584071-517c-4c00-bfac-fde5253d4d53.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\3f584071-517c-4c00-bfac-fde5253d4d53.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-dutj02018XX4YUDF0OPjOjFaB\u002Bex\u002BO/SYq5Vb3lLf10="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"335159"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022dutj02018XX4YUDF0OPjOjFaB\u002Bex\u002BO/SYq5Vb3lLf10=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 16:31:18 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/vastuformAPI/uploads/3f584071-517c-4c00-bfac-fde5253d4d53.y2y8689dan.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\3f584071-517c-4c00-bfac-fde5253d4d53.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"y2y8689dan"},{"Name":"integrity","Value":"sha256-dutj02018XX4YUDF0OPjOjFaB\u002Bex\u002BO/SYq5Vb3lLf10="},{"Name":"label","Value":"_content/vastuformAPI/uploads/3f584071-517c-4c00-bfac-fde5253d4d53.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"335159"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022dutj02018XX4YUDF0OPjOjFaB\u002Bex\u002BO/SYq5Vb3lLf10=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 16:31:18 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/vastuformAPI/uploads/a6d78e7a-efa6-451a-bce2-96a74b6acbc4.dt71uk9o0h.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\a6d78e7a-efa6-451a-bce2-96a74b6acbc4.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"dt71uk9o0h"},{"Name":"integrity","Value":"sha256-0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c="},{"Name":"label","Value":"_content/vastuformAPI/uploads/a6d78e7a-efa6-451a-bce2-96a74b6acbc4.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"54411"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00220RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 18:08:56 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/vastuformAPI/uploads/a6d78e7a-efa6-451a-bce2-96a74b6acbc4.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\a6d78e7a-efa6-451a-bce2-96a74b6acbc4.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"54411"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00220RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 18:08:56 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/vastuformAPI/uploads/af2c2c86-41ee-4504-ac11-2dea61531899.dt71uk9o0h.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\af2c2c86-41ee-4504-ac11-2dea61531899.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"dt71uk9o0h"},{"Name":"integrity","Value":"sha256-0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c="},{"Name":"label","Value":"_content/vastuformAPI/uploads/af2c2c86-41ee-4504-ac11-2dea61531899.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"54411"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00220RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 18:09:37 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/vastuformAPI/uploads/af2c2c86-41ee-4504-ac11-2dea61531899.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\af2c2c86-41ee-4504-ac11-2dea61531899.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"54411"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00220RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 18:09:37 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/vastuformAPI/uploads/b73d01f1-9b15-43ea-b310-d1fe7fbd14e3.dt71uk9o0h.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\b73d01f1-9b15-43ea-b310-d1fe7fbd14e3.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"dt71uk9o0h"},{"Name":"integrity","Value":"sha256-0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c="},{"Name":"label","Value":"_content/vastuformAPI/uploads/b73d01f1-9b15-43ea-b310-d1fe7fbd14e3.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"54411"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00220RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 18:05:50 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/vastuformAPI/uploads/b73d01f1-9b15-43ea-b310-d1fe7fbd14e3.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\b73d01f1-9b15-43ea-b310-d1fe7fbd14e3.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"54411"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00220RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 18:05:50 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/vastuformAPI/uploads/d06b2cc3-bad3-41ae-a00d-923b027891b7.dt71uk9o0h.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\d06b2cc3-bad3-41ae-a00d-923b027891b7.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"dt71uk9o0h"},{"Name":"integrity","Value":"sha256-0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c="},{"Name":"label","Value":"_content/vastuformAPI/uploads/d06b2cc3-bad3-41ae-a00d-923b027891b7.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"54411"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00220RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 18:06:43 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/vastuformAPI/uploads/d06b2cc3-bad3-41ae-a00d-923b027891b7.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\d06b2cc3-bad3-41ae-a00d-923b027891b7.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"54411"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00220RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 18:06:43 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/vastuformAPI/uploads/f0e76bc7-b92e-4b86-b508-864d9418224f.of8walgng8.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\f0e76bc7-b92e-4b86-b508-864d9418224f.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"of8walgng8"},{"Name":"integrity","Value":"sha256-TI/ASX9w8Saal2zQuFKDGBsiXD3mFwcYKV6hhyMxhMw="},{"Name":"label","Value":"_content/vastuformAPI/uploads/f0e76bc7-b92e-4b86-b508-864d9418224f.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1614403"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022TI/ASX9w8Saal2zQuFKDGBsiXD3mFwcYKV6hhyMxhMw=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 16:31:18 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/vastuformAPI/uploads/f0e76bc7-b92e-4b86-b508-864d9418224f.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\f0e76bc7-b92e-4b86-b508-864d9418224f.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-TI/ASX9w8Saal2zQuFKDGBsiXD3mFwcYKV6hhyMxhMw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1614403"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022TI/ASX9w8Saal2zQuFKDGBsiXD3mFwcYKV6hhyMxhMw=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 16:31:18 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

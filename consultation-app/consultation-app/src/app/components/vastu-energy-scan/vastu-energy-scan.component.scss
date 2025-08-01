@@ -1,0 +1,354 @@
+.vastu-scan-container {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.form-card {
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  }
+  
+  .mat-mdc-card-header {
+    background: linear-gradient(135deg, #9C27B0, #7B1FA2);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  
+  .mat-mdc-card-title {
+    color: #ffffff;
+    font-size: 28px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mat-mdc-card-subtitle {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 18px;
+    margin-bottom: 0;
+    letter-spacing: 0.5px;
+  }
+  
+  .mat-mdc-card-content {
+    padding: 32px;
+  }
+}
+
+.energy-form {
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .form-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .section-title {
+    color: #9C27B0;
+    margin: 0 0 20px;
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: 2px solid #E1BEE7;
+    padding-bottom: 10px;
+    letter-spacing: 0.5px;
+  }
+  
+  .aura-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .form-divider {
+    margin: 40px 0;
+    opacity: 0.6;
+  }
+  
+  .consultant-info, .services-info {
+    margin-bottom: 40px;
+    padding: 24px;
+    background-color: #F3E5F5;
+    border-radius: 10px;
+    border: 1px solid #E1BEE7;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(156, 39, 176, 0.1);
+    }
+    
+    h3 {
+      color: #9C27B0;
+      font-size: 20px;
+      margin-bottom: 20px;
+      font-weight: 500;
+      position: relative;
+      padding-bottom: 10px;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background-color: #9C27B0;
+      }
+    }
+    
+    p {
+      margin: 10px 0;
+      color: #5f6368;
+      line-height: 1.6;
+    }
+    
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      
+      li {
+        margin-bottom: 10px;
+        color: #5f6368;
+        line-height: 1.6;
+        position: relative;
+        padding-left: 5px;
+        
+        &::marker {
+          color: #3f51b5;
+        }
+      }
+    }
+  }
+  
+  .form-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    
+    .sanskrit-text {
+      font-size: 20px;
+      color: #9C27B0;
+      margin-bottom: 30px;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      letter-spacing: 0.5px;
+    }
+    
+    button {
+      min-width: 220px;
+      height: 50px;
+      font-size: 16px;
+      border-radius: 25px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 5px;
+        height: 5px;
+        background: rgba(255, 255, 255, 0.5);
+        opacity: 0;
+        border-radius: 100%;
+        transform: scale(1, 1) translate(-50%);
+        transform-origin: 50% 50%;
+      }
+      
+      &:hover::after {
+        animation: ripple 1s ease-out;
+      }
+    }
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  20% {
+    transform: scale(25, 25);
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+
+// Remove or modify the ::ng-deep styles that conflict with our global styles
+:host ::ng-deep {
+  .mat-mdc-form-field {
+    width: 100%;
+  }
+  
+  .mat-mdc-card-header {
+    padding: 16px 16px 0 16px;
+  }
+  
+  .mat-mdc-card-content {
+    padding: 8px 16px 16px 16px;
+  }
+  
+  textarea.mat-mdc-input-element {
+    resize: vertical;
+  }
+}
+
+.form-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+  }
+  
+  .main-title {
+    color: #3f51b5;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    color: #555;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+  
+  .header-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  mat-card {
+    margin-bottom: 1.5rem;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1) !important;
+    
+    &.form-section {
+      margin-top: 1.5rem;
+      transition: transform 0.2s ease-in-out;
+      
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+    
+    mat-card-title {
+      color: #3f51b5;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .section-subtitle {
+    color: #555;
+    font-size: 1rem;
+    margin: 1.5rem 0 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    
+    mat-form-field {
+      flex: 1 1 calc(50% - 0.5rem);
+      min-width: 250px;
+      
+      &.full-width {
+        flex: 1 1 100%;
+      }
+      
+      @media (max-width: 599px) {
+        flex: 1 1 100%;
+      }
+    }
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+    
+    button {
+      min-width: 120px;
+    }
+  }
+}
+
+// Input field specific styling
+:host ::ng-deep {
+  .mat-mdc-form-field {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  
+  .mat-mdc-card-header {
+    padding: 16px 16px 0 16px;
+  }
+  
+  .mat-mdc-card-content {
+    padding: 8px 16px 16px 16px;
+  }
+  
+  textarea.mat-mdc-input-element {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  .mat-mdc-form-field-infix {
+    padding: 12px 0 !important;
+  }
+}
+
+.report-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+  
+  button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+

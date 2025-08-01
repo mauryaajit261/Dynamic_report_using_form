@@ -1,0 +1,213 @@
+<div class="form-container">
+  <div class="header-content">
+    <h1 class="main-title">Vastu Energy Scan Form</h1>
+    <p class="subtitle">|| Om Sri Sairam ||</p>
+  </div>
+
+  <form [formGroup]="energyScanForm" (ngSubmit)="onSubmit()">
+    <!-- Client & Basic Information Card -->
+    <mat-card class="form-section">
+      <mat-card-header>
+        <mat-card-title>🧾 Client & Basic Information</mat-card-title>
+      </mat-card-header>
+      
+      <mat-card-content>
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="energyScanForm.get('date')?.hasError('required')">Date is required</mat-error>
+          </mat-form-field>
+          
+          <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" placeholder="Enter your name" appSpeechInput>
+            <mat-error *ngIf="energyScanForm.get('name')?.hasError('required')">Name is required</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Date of Birth</mat-label>
+            <input matInput [matDatepicker]="dobPicker" formControlName="dateOfBirth">
+            <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+            <mat-datepicker #dobPicker></mat-datepicker>
+            <mat-error *ngIf="energyScanForm.get('dateOfBirth')?.hasError('required')">Date of birth is required</mat-error>
+          </mat-form-field>
+          
+          <mat-form-field appearance="outline">
+            <mat-label>Contact No.</mat-label>
+            <input matInput formControlName="contactNo" type="tel" placeholder="Enter contact number" appSpeechInput>
+            <mat-error *ngIf="energyScanForm.get('contactNo')?.hasError('required')">Contact number is required</mat-error>
+            <mat-error *ngIf="energyScanForm.get('contactNo')?.hasError('pattern')">Please enter a valid 10-digit number</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>E-mail</mat-label>
+            <input matInput formControlName="email" type="email" placeholder="Enter your email" appSpeechInput>
+            <mat-error *ngIf="energyScanForm.get('email')?.hasError('required')">Email is required</mat-error>
+            <mat-error *ngIf="energyScanForm.get('email')?.hasError('email')">Please enter a valid email</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Address</mat-label>
+            <textarea matInput formControlName="address" rows="3" placeholder="Enter your address" appSpeechInput></textarea>
+            <mat-error *ngIf="energyScanForm.get('address')?.hasError('required')">Address is required</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Health Issues You Are Facing</mat-label>
+            <textarea matInput formControlName="healthIssues" rows="3" placeholder="Describe your health issues" appSpeechInput></textarea>
+            <mat-error *ngIf="energyScanForm.get('healthIssues')?.hasError('required')">Health issues information is required</mat-error>
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Chakra Energy Readings Card -->
+    <mat-card class="form-section">
+      <mat-card-header>
+        <mat-card-title>🌀 Chakra Energy Readings</mat-card-title>
+      </mat-card-header>
+      
+      <mat-card-content>
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Sahasara Chakra (Crown)</mat-label>
+            <textarea matInput formControlName="sahasaraChakra" rows="2" appSpeechInput></textarea>
+            <mat-error *ngIf="energyScanForm.get('sahasaraChakra')?.hasError('required')">This field is required</mat-error>
+          </mat-form-field>
+          
+          <mat-form-field appearance="outline">
+            <mat-label>Ajna Chakra (Third Eye)</mat-label>
+            <textarea matInput formControlName="ajnaChakra" rows="2" appSpeechInput></textarea>
+            <mat-error *ngIf="energyScanForm.get('ajnaChakra')?.hasError('required')">This field is required</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Vishuddha Chakra (Throat)</mat-label>
+            <textarea matInput formControlName="vishuddhaChakra" rows="2" appSpeechInput></textarea>
+            <mat-error *ngIf="energyScanForm.get('vishuddhaChakra')?.hasError('required')">This field is required</mat-error>
+          </mat-form-field>
+          
+          <mat-form-field appearance="outline">
+            <mat-label>Anahat Chakra (Heart)</mat-label>
+            <textarea matInput formControlName="anahatChakra" rows="2" appSpeechInput></textarea>
+            <mat-error *ngIf="energyScanForm.get('anahatChakra')?.hasError('required')">This field is required</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Manipura Chakra (Solar Plexus)</mat-label>
+            <textarea matInput formControlName="manipuraChakra" rows="2" appSpeechInput></textarea>
+            <mat-error *ngIf="energyScanForm.get('manipuraChakra')?.hasError('required')">This field is required</mat-error>
+          </mat-form-field>
+          
+          <mat-form-field appearance="outline">
+            <mat-label>Svaddhisthana Chakra (Sacral)</mat-label>
+            <textarea matInput formControlName="svaddhisthanaChakra" rows="2" appSpeechInput></textarea>
+            <mat-error *ngIf="energyScanForm.get('svaddhisthanaChakra')?.hasError('required')">This field is required</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Muldhara Chakra (Root)</mat-label>
+            <textarea matInput formControlName="muldharaChakra" rows="2" appSpeechInput></textarea>
+            <mat-error *ngIf="energyScanForm.get('muldharaChakra')?.hasError('required')">This field is required</mat-error>
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Aura Details Card -->
+    <mat-card class="form-section">
+      <mat-card-header>
+        <mat-card-title>🌈 Aura Details</mat-card-title>
+      </mat-card-header>
+      
+      <mat-card-content>
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Aura Energy</mat-label>
+            <textarea matInput formControlName="auraEnergy" rows="2" appSpeechInput></textarea>
+            <mat-error *ngIf="energyScanForm.get('auraEnergy')?.hasError('required')">This field is required</mat-error>
+          </mat-form-field>
+          
+          <mat-form-field appearance="outline">
+            <mat-label>Aura Length</mat-label>
+            <textarea matInput formControlName="auraLength" rows="2" appSpeechInput></textarea>
+            <mat-error *ngIf="energyScanForm.get('auraLength')?.hasError('required')">This field is required</mat-error>
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Consultant & Office Information Card -->
+    <mat-card class="form-section">
+      <mat-card-header>
+        <mat-card-title>🧑‍💼 Consultant & Office Information</mat-card-title>
+      </mat-card-header>
+      
+      <mat-card-content>
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Consultant Name</mat-label>
+            <input matInput formControlName="consultantName" appSpeechInput>
+            <mat-error *ngIf="energyScanForm.get('consultantName')?.hasError('required')">Consultant name is required</mat-error>
+          </mat-form-field>
+          
+          <mat-form-field appearance="outline">
+            <mat-label>Contact No.</mat-label>
+            <input matInput formControlName="contactNos" appSpeechInput>
+            <mat-error *ngIf="energyScanForm.get('contactNos')?.hasError('required')">Contact number is required</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Office Address</mat-label>
+            <textarea matInput formControlName="officeAddress" rows="3" appSpeechInput></textarea>
+            <mat-error *ngIf="energyScanForm.get('officeAddress')?.hasError('required')">Office address is required</mat-error>
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <div class="form-actions">
+      <button mat-button type="button" (click)="navigateToList()">
+        Cancel
+      </button>
+      <button mat-raised-button color="primary" type="submit" [disabled]="energyScanForm.valid">
+        Submit
+      </button>
+    </div>
+  </form>
+<!--
+  <div class="report-actions" *ngIf="isEditMode">
+    <button mat-raised-button color="primary" (click)="downloadReport()">
+      <mat-icon>download</mat-icon>
+      Download Report
+    </button>
+    <button mat-raised-button color="accent" (click)="shareReport()">
+      <mat-icon>share</mat-icon>
+      Share Report
+    </button>
+    <button mat-raised-button color="warn" (click)="sendReport()">
+      <mat-icon>email</mat-icon>
+      Send Report
+    </button>
+  </div>
+-->
+</div>

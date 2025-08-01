@@ -1,0 +1,258 @@
+<div class="form-container">
+  <mat-card>
+    <mat-card-header>
+      <div class="header-content">
+        <h1 class="main-title">Om Sri Sairam</h1>
+        <h2 class="subtitle">Consultation Form</h2>
+      </div>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="consultationForm" (ngSubmit)="onSubmit()">
+        
+        <div class="submit-button-top">
+          <button mat-raised-button color="primary" type="submit" [disabled]="!consultationForm.valid || isSubmitting">
+            <mat-icon>save</mat-icon> Submit Form
+          </button>
+        </div>
+        
+        <mat-card class="form-section">
+          <mat-card-header>
+            <mat-card-title>Personal Information</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Date</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <mat-error *ngIf="consultationForm.get('date')?.hasError('required')">Date is required</mat-error>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Date of Birth</mat-label>
+                <input matInput [matDatepicker]="dobPicker" formControlName="dateOfBirth">
+                <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+                <mat-datepicker #dobPicker></mat-datepicker>
+                <mat-error *ngIf="consultationForm.get('dateOfBirth')?.hasError('required')">Date of Birth is required</mat-error>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name" appSpeechInput>
+                <mat-error *ngIf="consultationForm.get('name')?.hasError('required')">Name is required</mat-error>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Address</mat-label>
+                <textarea matInput formControlName="address" rows="3" appSpeechInput></textarea>
+                <mat-error *ngIf="consultationForm.get('address')?.hasError('required')">Address is required</mat-error>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Pin Code</mat-label>
+                <input matInput formControlName="pincode" appSpeechInput>
+                <mat-error *ngIf="consultationForm.get('pincode')?.hasError('required')">Pin Code is required</mat-error>
+                <mat-error *ngIf="consultationForm.get('pincode')?.hasError('pattern')">Please enter a valid 6-digit pin code</mat-error>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Contact Number</mat-label>
+                <input matInput formControlName="contactNo" appSpeechInput>
+                <mat-error *ngIf="consultationForm.get('contactNo')?.hasError('required')">Contact Number is required</mat-error>
+                <mat-error *ngIf="consultationForm.get('contactNo')?.hasError('pattern')">Please enter a valid 10-digit number</mat-error>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" type="email" appSpeechInput>
+                <mat-error *ngIf="consultationForm.get('email')?.hasError('required')">Email is required</mat-error>
+                <mat-error *ngIf="consultationForm.get('email')?.hasError('email')">Please enter a valid email address</mat-error>
+              </mat-form-field>
+            </div>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="form-section">
+          <mat-card-header>
+            <mat-card-title>Questions & Problems</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Questions You Have in Your Mind</mat-label>
+                <textarea matInput formControlName="questions" rows="4" appSpeechInput></textarea>
+                <mat-error *ngIf="consultationForm.get('questions')?.hasError('required')">This field is required</mat-error>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Problem You Are Facing</mat-label>
+                <textarea matInput formControlName="problem" rows="4" appSpeechInput></textarea>
+                <mat-error *ngIf="consultationForm.get('problem')?.hasError('required')">This field is required</mat-error>
+              </mat-form-field>
+            </div>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="form-section">
+          <mat-card-header>
+            <mat-card-title>To Be Filled by Officials</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <h3 class="section-subtitle">Chakra Information</h3>
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Sahasara Chakra (Crown)</mat-label>
+                <textarea matInput formControlName="sahasaraChakra" rows="2"></textarea>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Ajna Chakra (Third Eye)</mat-label>
+                <textarea matInput formControlName="ajnaChakra" rows="2"></textarea>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Vishuddha Chakra (Throat)</mat-label>
+                <textarea matInput formControlName="vishuddhaChakra" rows="2"></textarea>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Anahat Chakra (Heart)</mat-label>
+                <textarea matInput formControlName="anahatChakra" rows="2"></textarea>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Manipura Chakra (Solar Plexus)</mat-label>
+                <textarea matInput formControlName="manipuraChakra" rows="2"></textarea>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Svaddhisthana Chakra (Sacral)</mat-label>
+                <textarea matInput formControlName="svaddhisthanaChakra" rows="2"></textarea>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Muldhara Chakra (Root)</mat-label>
+                <textarea matInput formControlName="muldharaChakra" rows="2" appSpeechInput></textarea>
+              </mat-form-field>
+            </div>
+            
+            <h3 class="section-subtitle">Energy Information</h3>
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Aura Energy & Aura Length</mat-label>
+                <input matInput formControlName="auraEnergy" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Body Aura %</mat-label>
+                <input matInput formControlName="bodyAuraPercentage" type="number">
+              </mat-form-field>
+            </div>
+            
+            <h3 class="section-subtitle">Numerology & Colors</h3>
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Lucky Color</mat-label>
+                <input matInput formControlName="luckyColor" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Lucky Number</mat-label>
+                <input matInput formControlName="luckyNumber" type="number">
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Color to Avoid</mat-label>
+                <input matInput formControlName="colorToAvoid" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Number to Avoid</mat-label>
+                <input matInput formControlName="numberToAvoid" type="number">
+              </mat-form-field>
+            </div>
+            
+            <h3 class="section-subtitle">Recommendations</h3>
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Personality</mat-label>
+                <textarea matInput formControlName="personality" rows="2" appSpeechInput></textarea>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Gemstone</mat-label>
+                <input matInput formControlName="gemstone" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Crystal</mat-label>
+                <input matInput formControlName="crystal" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Oorja Liquid</mat-label>
+                <input matInput formControlName="oorjaLiquid" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Soap</mat-label>
+                <input matInput formControlName="soap" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Salt</mat-label>
+                <input matInput formControlName="salt" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Any Other</mat-label>
+                <textarea matInput formControlName="anyOther" rows="2" appSpeechInput></textarea>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Observations & Remedies</mat-label>
+                <textarea matInput formControlName="observationsAndRemedies" rows="4"></textarea>
+              </mat-form-field>
+            </div>
+          </mat-card-content>
+        </mat-card>
+
+        <div class="form-actions">
+          <button mat-stroked-button type="button" (click)="resetForm()">
+            <mat-icon>refresh</mat-icon> Reset
+          </button>
+          <button mat-raised-button color="primary" type="submit" [disabled]="!consultationForm.valid || isSubmitting">
+            <mat-icon>save</mat-icon> Submit
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

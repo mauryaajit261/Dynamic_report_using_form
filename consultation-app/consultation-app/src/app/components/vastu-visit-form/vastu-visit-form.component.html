@@ -1,0 +1,772 @@
+<div class="form-container">
+  <mat-card>
+    <mat-card-header>
+      <div class="header-content">
+        <h1 class="main-title">Om Sri Sairam</h1>
+        <h2 class="subtitle">Vastu Visit Form</h2>
+        
+        <div class="progress-container">
+          <span class="progress-text">Form completion: {{formProgress}}%</span>
+          <mat-progress-bar mode="determinate" [value]="formProgress"></mat-progress-bar>
+        </div>
+      </div>
+    </mat-card-header>
+    
+    <mat-card-content>
+      <form [formGroup]="vastuVisitForm" (ngSubmit)="onSubmit()">
+        <div class="submit-button-top">
+          <button mat-raised-button color="primary" type="submit" [disabled]="isSubmitting">
+            <mat-icon>save</mat-icon> Submit Form
+          </button>
+        </div>
+        
+        <!-- Basic Details Card -->
+        <mat-card class="form-section">
+          <mat-card-header>
+            <mat-card-title>🗓️ Basic Visit Information</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Date</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Time</mat-label>
+                <input matInput type="time" formControlName="time">
+              </mat-form-field>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        
+        <!-- Client Information Card -->
+        <mat-card class="form-section">
+          <mat-card-header>
+            <mat-card-title>👤 Client & Property Details</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Client's Name</mat-label>
+                <input matInput formControlName="clientName" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Address</mat-label>
+                <textarea matInput formControlName="address" rows="3" appSpeechInput></textarea>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Area Pin Code</mat-label>
+                <input matInput formControlName="pinCode" appSpeechInput>
+              </mat-form-field>
+            
+              <mat-form-field appearance="outline">
+                <mat-label>Contact Number</mat-label>
+                <input matInput formControlName="contactNo" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" formControlName="email" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Name of Building</mat-label>
+                <input matInput formControlName="buildingName" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Year of Construction</mat-label>
+                <input matInput formControlName="constructionYear" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Type of Building</mat-label>
+                <mat-select formControlName="buildingType">
+                  <mat-option *ngFor="let type of buildingTypes" [value]="type">{{type}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Name of Owner</mat-label>
+                <input matInput formControlName="ownerName" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Area (Sq. ft.)</mat-label>
+                <input matInput formControlName="area" type="number" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Construction Area (Sq. ft.)</mat-label>
+                <input matInput formControlName="constructionArea" type="number" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Length (Sq. ft.)</mat-label>
+                <input matInput formControlName="length" type="number" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Width (Sq. ft.)</mat-label>
+                <input matInput formControlName="width" type="number" appSpeechInput>
+              </mat-form-field>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        
+        <!-- Client Personal Details Card -->
+        <mat-card class="form-section">
+          <mat-card-header>
+            <mat-card-title>🧘‍♂️ Client Personal Details</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Date of Birth</mat-label>
+                <input matInput [matDatepicker]="dobPicker" formControlName="dateOfBirth">
+                <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+                <mat-datepicker #dobPicker></mat-datepicker>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Place of Birth</mat-label>
+                <input matInput formControlName="birthPlace" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Birth Time</mat-label>
+                <mat-select formControlName="birthTime">
+                  <mat-option *ngFor="let time of timeOfDayOptions" [value]="time">{{time}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Occupation</mat-label>
+                <input matInput formControlName="occupation" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Qualification</mat-label>
+                <input matInput formControlName="qualification" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Name of Husband/Wife</mat-label>
+                <input matInput formControlName="spouseName" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Date of Birth (Spouse)</mat-label>
+                <input matInput [matDatepicker]="spouseDobPicker" formControlName="spouseDateOfBirth">
+                <mat-datepicker-toggle matSuffix [for]="spouseDobPicker"></mat-datepicker-toggle>
+                <mat-datepicker #spouseDobPicker></mat-datepicker>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Place of Birth (Spouse)</mat-label>
+                <input matInput formControlName="spouseBirthPlace" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Birth Time (Spouse)</mat-label>
+                <mat-select formControlName="spouseBirthTime">
+                  <mat-option *ngFor="let time of timeOfDayOptions" [value]="time">{{time}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        
+        <!-- Family Members Card -->
+   <!-- Family Members Card --><mat-card class="form-section">
+  <mat-card-header>
+    <mat-card-title>👪 Family Member Details</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <button mat-raised-button color="primary" type="button" (click)="addFamilyMember()" class="add-button">
+      <mat-icon>add</mat-icon> Add Family Member
+    </button>
+
+    <div *ngIf="familyMembers.length === 0" class="empty-message">
+      No family members added yet. Click the button above to add family members.
+    </div>
+
+    <!-- ✅ Corrected: Wrap with formArrayName -->
+    <div formArrayName="familyMembers">
+      <div *ngFor="let member of familyMembers.controls; let i = index" [formGroupName]="i" class="family-member-container">
+        <div class="family-member-header">
+          <h3>Family Member #{{i + 1}}</h3>
+          <button mat-icon-button color="warn" type="button" (click)="removeFamilyMember(i)" aria-label="Remove family member">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+
+        <h3 class="section-subtitle">Personal Information</h3>
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" appSpeechInput>
+            <mat-icon matSuffix>person</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Relation</mat-label>
+            <input matInput formControlName="relation" appSpeechInput>
+            <mat-icon matSuffix>family_restroom</mat-icon>
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Age</mat-label>
+            <input matInput type="number" formControlName="age" appSpeechInput>
+            <mat-icon matSuffix>calendar_today</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Present Problem</mat-label>
+            <textarea matInput formControlName="presentProblem" rows="2" appSpeechInput></textarea>
+            <mat-icon matSuffix>sick</mat-icon>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+
+        <!-- Vastu and Structure Observations -->
+        <mat-card class="form-section">
+          <mat-card-header>
+            <mat-card-title>🧭 Vastu and Structure Observations</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Any Special Incident in Vastu</mat-label>
+                <textarea matInput formControlName="specialIncidents" rows="3" appSpeechInput></textarea>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Shape of Land</mat-label>
+                <mat-select formControlName="landShape">
+                  <mat-option *ngFor="let shape of landShapeOptions" [value]="shape">{{shape}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Slope of Land</mat-label>
+                <input matInput formControlName="landSlope" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Closed Directions</mat-label>
+                <input matInput formControlName="closedDirections" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Open Directions</mat-label>
+                <input matInput formControlName="openDirections" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>North Shift Degree</mat-label>
+                <input matInput type="number" formControlName="northShiftDegree" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Surrounding Roads</mat-label>
+                <textarea matInput formControlName="surroundingRoads" rows="3" appSpeechInput></textarea>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row checkbox-row">
+              <mat-checkbox formControlName="isVithishula">Is the Plot Vithishula?</mat-checkbox>
+            </div>
+            
+            <div class="form-row" *ngIf="vastuVisitForm.get('isVithishula')?.value">
+              <mat-form-field appearance="outline">
+                <mat-label>Direction of Vithishula</mat-label>
+                <input matInput formControlName="vithishulaDirection" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Internal Arrangement</mat-label>
+                <textarea matInput formControlName="internalArrangement" rows="3" appSpeechInput></textarea>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Compound Entry</mat-label>
+                <textarea matInput formControlName="compoundEntry" rows="2" appSpeechInput></textarea>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Plot Surrounding Observations</mat-label>
+                <textarea matInput formControlName="plotSurroundingObservations" rows="3" appSpeechInput></textarea>
+              </mat-form-field>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        
+        <!-- Structural Elements -->
+        <mat-card class="form-section">
+          <mat-card-header>
+            <mat-card-title>🏡 Structural Elements</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <h3 class="section-subtitle">Environmental Features</h3>
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Pit</mat-label>
+                <input matInput formControlName="pit" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Hill</mat-label>
+                <input matInput formControlName="hill" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Temple</mat-label>
+                <input matInput formControlName="temple" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Public Place</mat-label>
+                <input matInput formControlName="publicPlace" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <h3 class="section-subtitle">Entry & Exterior</h3>
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Plot Entry Direction and Pada</mat-label>
+                <input matInput formControlName="plotEntryDirectionAndPada" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Compound Length/Height</mat-label>
+                <input matInput formControlName="compoundLengthHeight" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Direction of Porch</mat-label>
+                <input matInput formControlName="directionOfPorch" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Parking</mat-label>
+                <input matInput formControlName="parking" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <h3 class="section-subtitle">Water & Utilities</h3>
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Underground Water Tank</mat-label>
+                <input matInput formControlName="undergroundWaterTank" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Borewell</mat-label>
+                <input matInput formControlName="borewell" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Tap</mat-label>
+                <input matInput formControlName="tap" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Electric Meter & Switch Board</mat-label>
+                <input matInput formControlName="electricMeterAndSwitchBoard" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <h3 class="section-subtitle">Building Interior</h3>
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Staircase Direction and Type</mat-label>
+                <input matInput formControlName="staircaseDirectionAndType" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Internal Staircase</mat-label>
+                <input matInput formControlName="internalStaircase" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Lift Direction</mat-label>
+                <input matInput formControlName="liftDirection" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Living Room</mat-label>
+                <input matInput formControlName="livingRoom" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Bhavan Entry</mat-label>
+                <input matInput formControlName="bhavanEntry" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Mirrors</mat-label>
+                <input matInput formControlName="mirrors" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Surrounding Trees</mat-label>
+                <input matInput formControlName="surroundingTrees" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Lawn Direction</mat-label>
+                <input matInput formControlName="lawnDirection" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <h3 class="section-subtitle">Rooms & Facilities</h3>
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Kitchen, Platform, Stove, Basin</mat-label>
+                <textarea matInput formControlName="kitchenDetails" rows="3" appSpeechInput></textarea>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Study Room, Bookshelf, Window, Study Table Facing</mat-label>
+                <textarea matInput formControlName="studyRoomDetails" rows="3" appSpeechInput></textarea>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Bedroom, Bed Direction, Sleeping Direction, Mirrors</mat-label>
+                <textarea matInput formControlName="bedroomDetails" rows="3" appSpeechInput></textarea>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Locker, Prayer Room</mat-label>
+                <input matInput formControlName="lockerPrayerRoom" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Bathroom, Toilet</mat-label>
+                <input matInput formControlName="bathroomToilet" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <h3 class="section-subtitle">Special Areas</h3>
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Septic Tank, Basement</mat-label>
+                <input matInput formControlName="septicTankBasement" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Brahmasthana Observations</mat-label>
+                <input matInput formControlName="brahmasthanaObservations" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Toilets Location and Directions</mat-label>
+                <input matInput formControlName="toiletsLocationAndDirections" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Septic Tank Location and Direction</mat-label>
+                <input matInput formControlName="septicTankLocationAndDirection" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Basement Location and Direction</mat-label>
+                <input matInput formControlName="basementLocationAndDirection" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>About the Direction of Vastu and Other Observations</mat-label>
+                <textarea matInput formControlName="aboutDirectionOfVastu" rows="3" appSpeechInput></textarea>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Lechtare Antena Values</mat-label>
+                <input matInput formControlName="lechtareAntenaValues" appSpeechInput>
+              </mat-form-field>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        
+        <!-- Reports and Observations -->
+        <mat-card class="form-section">
+          <mat-card-header>
+            <mat-card-title>📊 Reports and Observations</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <h3 class="section-subtitle">Analysis Reports</h3>
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Dowsing Report</mat-label>
+                <textarea matInput formControlName="dowsingReport" rows="3" appSpeechInput></textarea>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Vastu Land Defects</mat-label>
+                <textarea matInput formControlName="vastuLandDefects" rows="3" appSpeechInput></textarea>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row checkbox-row">
+              <mat-checkbox formControlName="goodForLivingBusiness">Good For Living/Business</mat-checkbox>
+            </div>
+            
+            <h3 class="section-subtitle">Energy Observations</h3>
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Vastu Energy, Shalya Dosh, Direction Defect, etc.</mat-label>
+                <textarea matInput formControlName="vastuEnergy" rows="3" appSpeechInput></textarea>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Reason of Negativity</mat-label>
+                <textarea matInput formControlName="reasonOfNegativity" rows="3" appSpeechInput></textarea>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row checkbox-row">
+              <mat-checkbox formControlName="geopathicStress">Geopathic Stress</mat-checkbox>
+            </div>
+            
+            <div class="form-row" *ngIf="vastuVisitForm.get('geopathicStress')?.value">
+              <mat-form-field appearance="outline">
+                <mat-label>No. of Points</mat-label>
+                <input matInput type="number" formControlName="noOfPoints" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <h3 class="section-subtitle">Energy Readings</h3>
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Ratna Nikshap</mat-label>
+                <textarea matInput formControlName="ratnaNikshap" rows="2" appSpeechInput></textarea>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Total Positive Energy</mat-label>
+                <input matInput type="number" formControlName="totalPositiveEnergy" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Total Negative Energy</mat-label>
+                <input matInput type="number" formControlName="totalNegativeEnergy" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Compatibility</mat-label>
+                <textarea matInput formControlName="compatibility" rows="2" appSpeechInput></textarea>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Micro Energies (Money Attraction, Health, etc.)</mat-label>
+                <textarea matInput formControlName="microEnergies" rows="3" appSpeechInput></textarea>
+              </mat-form-field>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        
+        <!-- Remedies -->
+        <mat-card class="form-section">
+          <mat-card-header>
+            <mat-card-title>🧿 Remedies</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <h3 class="section-subtitle">Remedy Steps</h3>
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>1st Step Remedy</mat-label>
+                <textarea matInput formControlName="firstStepRemedy" rows="3" appSpeechInput></textarea>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>2nd Step Remedy</mat-label>
+                <textarea matInput formControlName="secondStepRemedy" rows="3" appSpeechInput></textarea>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>3rd Step Remedy</mat-label>
+                <textarea matInput formControlName="thirdStepRemedy" rows="3" appSpeechInput></textarea>
+              </mat-form-field>
+            </div>
+            
+            <h3 class="section-subtitle">Treatment Details</h3>
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>1st Line of Treatment</mat-label>
+                <textarea matInput formControlName="firstLineOfTreatment" rows="3" appSpeechInput></textarea>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Advance</mat-label>
+                <textarea matInput formControlName="advance" rows="2" appSpeechInput></textarea>
+              </mat-form-field>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        
+        <!-- UES Values -->
+        <mat-card class="form-section">
+          <mat-card-header>
+            <mat-card-title>🔬 UES Values</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>-ve IR</mat-label>
+                <input matInput type="number" formControlName="negativeIR" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>-ve UV</mat-label>
+                <input matInput type="number" formControlName="negativeUV" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Total +ve Oorja</mat-label>
+                <input matInput type="number" formControlName="totalPositiveOorja" appSpeechInput>
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline">
+                <mat-label>Total -ve Oorja</mat-label>
+                <input matInput type="number" formControlName="totalNegativeOorja" appSpeechInput>
+              </mat-form-field>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        
+        <!-- Final Report -->
+        <mat-card class="form-section">
+          <mat-card-header>
+            <mat-card-title>🖊️ Final Report</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Report Prepared By</mat-label>
+                <input matInput formControlName="reportPreparedBy" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Sign</mat-label>
+                <input matInput formControlName="sign" appSpeechInput>
+              </mat-form-field>
+            </div>
+            
+            <div class="form-row">
+              <mat-form-field appearance="outline">
+                <mat-label>Date</mat-label>
+                <input matInput [matDatepicker]="reportDatePicker" formControlName="reportDate">
+                <mat-datepicker-toggle matSuffix [for]="reportDatePicker"></mat-datepicker-toggle>
+                <mat-datepicker #reportDatePicker></mat-datepicker>
+              </mat-form-field>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        
+        <div class="form-actions">
+      <!--    <button mat-stroked-button type="button" (click)="resetForm()">
+            <mat-icon>refresh</mat-icon> Reset
+          </button> -->
+          <button mat-raised-button color="primary" type="submit" [disabled]="isSubmitting">
+            <mat-icon>save</mat-icon> Submit
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,743 @@
+{
+  "Version": 1,
+  "Hash": "h6i/LCTKehu7HXNrEIKgDVyFJBOPLTPcv0jHPnpojlM=",
+  "Source": "vastuformAPI",
+  "BasePath": "_content/vastuformAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "vastuformAPI\\wwwroot",
+      "Source": "vastuformAPI",
+      "ContentRoot": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\",
+      "BasePath": "_content/vastuformAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\1f1f39c3-1535-41af-9cf2-2a496ed9a18a.png",
+      "SourceId": "vastuformAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\",
+      "BasePath": "_content/vastuformAPI",
+      "RelativePath": "uploads/1f1f39c3-1535-41af-9cf2-2a496ed9a18a#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6iuba6yfad",
+      "Integrity": "LnF8YbZQ9klZNursT9bkD17rlFSnJCyF5TfxVaHGOy8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\1f1f39c3-1535-41af-9cf2-2a496ed9a18a.png"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\3f584071-517c-4c00-bfac-fde5253d4d53.png",
+      "SourceId": "vastuformAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\",
+      "BasePath": "_content/vastuformAPI",
+      "RelativePath": "uploads/3f584071-517c-4c00-bfac-fde5253d4d53#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "y2y8689dan",
+      "Integrity": "dutj02018XX4YUDF0OPjOjFaB+ex+O/SYq5Vb3lLf10=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\3f584071-517c-4c00-bfac-fde5253d4d53.png"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\a6d78e7a-efa6-451a-bce2-96a74b6acbc4.jpg",
+      "SourceId": "vastuformAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\",
+      "BasePath": "_content/vastuformAPI",
+      "RelativePath": "uploads/a6d78e7a-efa6-451a-bce2-96a74b6acbc4#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dt71uk9o0h",
+      "Integrity": "0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\a6d78e7a-efa6-451a-bce2-96a74b6acbc4.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\af2c2c86-41ee-4504-ac11-2dea61531899.jpg",
+      "SourceId": "vastuformAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\",
+      "BasePath": "_content/vastuformAPI",
+      "RelativePath": "uploads/af2c2c86-41ee-4504-ac11-2dea61531899#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dt71uk9o0h",
+      "Integrity": "0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\af2c2c86-41ee-4504-ac11-2dea61531899.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\b73d01f1-9b15-43ea-b310-d1fe7fbd14e3.jpg",
+      "SourceId": "vastuformAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\",
+      "BasePath": "_content/vastuformAPI",
+      "RelativePath": "uploads/b73d01f1-9b15-43ea-b310-d1fe7fbd14e3#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dt71uk9o0h",
+      "Integrity": "0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\b73d01f1-9b15-43ea-b310-d1fe7fbd14e3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\d06b2cc3-bad3-41ae-a00d-923b027891b7.jpg",
+      "SourceId": "vastuformAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\",
+      "BasePath": "_content/vastuformAPI",
+      "RelativePath": "uploads/d06b2cc3-bad3-41ae-a00d-923b027891b7#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dt71uk9o0h",
+      "Integrity": "0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\d06b2cc3-bad3-41ae-a00d-923b027891b7.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\f0e76bc7-b92e-4b86-b508-864d9418224f.png",
+      "SourceId": "vastuformAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\",
+      "BasePath": "_content/vastuformAPI",
+      "RelativePath": "uploads/f0e76bc7-b92e-4b86-b508-864d9418224f#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "of8walgng8",
+      "Integrity": "TI/ASX9w8Saal2zQuFKDGBsiXD3mFwcYKV6hhyMxhMw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\f0e76bc7-b92e-4b86-b508-864d9418224f.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "uploads/1f1f39c3-1535-41af-9cf2-2a496ed9a18a.6iuba6yfad.png",
+      "AssetFile": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\1f1f39c3-1535-41af-9cf2-2a496ed9a18a.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "319066"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LnF8YbZQ9klZNursT9bkD17rlFSnJCyF5TfxVaHGOy8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 17:25:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6iuba6yfad"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/1f1f39c3-1535-41af-9cf2-2a496ed9a18a.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LnF8YbZQ9klZNursT9bkD17rlFSnJCyF5TfxVaHGOy8="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/1f1f39c3-1535-41af-9cf2-2a496ed9a18a.png",
+      "AssetFile": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\1f1f39c3-1535-41af-9cf2-2a496ed9a18a.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "319066"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LnF8YbZQ9klZNursT9bkD17rlFSnJCyF5TfxVaHGOy8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 17:25:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LnF8YbZQ9klZNursT9bkD17rlFSnJCyF5TfxVaHGOy8="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/3f584071-517c-4c00-bfac-fde5253d4d53.png",
+      "AssetFile": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\3f584071-517c-4c00-bfac-fde5253d4d53.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "335159"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dutj02018XX4YUDF0OPjOjFaB+ex+O/SYq5Vb3lLf10=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 16:31:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-dutj02018XX4YUDF0OPjOjFaB+ex+O/SYq5Vb3lLf10="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/3f584071-517c-4c00-bfac-fde5253d4d53.y2y8689dan.png",
+      "AssetFile": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\3f584071-517c-4c00-bfac-fde5253d4d53.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "335159"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dutj02018XX4YUDF0OPjOjFaB+ex+O/SYq5Vb3lLf10=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 16:31:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y2y8689dan"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/3f584071-517c-4c00-bfac-fde5253d4d53.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-dutj02018XX4YUDF0OPjOjFaB+ex+O/SYq5Vb3lLf10="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/a6d78e7a-efa6-451a-bce2-96a74b6acbc4.dt71uk9o0h.jpg",
+      "AssetFile": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\a6d78e7a-efa6-451a-bce2-96a74b6acbc4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "54411"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 18:08:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dt71uk9o0h"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/a6d78e7a-efa6-451a-bce2-96a74b6acbc4.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/a6d78e7a-efa6-451a-bce2-96a74b6acbc4.jpg",
+      "AssetFile": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\a6d78e7a-efa6-451a-bce2-96a74b6acbc4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "54411"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 18:08:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/af2c2c86-41ee-4504-ac11-2dea61531899.dt71uk9o0h.jpg",
+      "AssetFile": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\af2c2c86-41ee-4504-ac11-2dea61531899.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "54411"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 18:09:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dt71uk9o0h"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/af2c2c86-41ee-4504-ac11-2dea61531899.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/af2c2c86-41ee-4504-ac11-2dea61531899.jpg",
+      "AssetFile": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\af2c2c86-41ee-4504-ac11-2dea61531899.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "54411"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 18:09:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/b73d01f1-9b15-43ea-b310-d1fe7fbd14e3.dt71uk9o0h.jpg",
+      "AssetFile": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\b73d01f1-9b15-43ea-b310-d1fe7fbd14e3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "54411"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 18:05:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dt71uk9o0h"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/b73d01f1-9b15-43ea-b310-d1fe7fbd14e3.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/b73d01f1-9b15-43ea-b310-d1fe7fbd14e3.jpg",
+      "AssetFile": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\b73d01f1-9b15-43ea-b310-d1fe7fbd14e3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "54411"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 18:05:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/d06b2cc3-bad3-41ae-a00d-923b027891b7.dt71uk9o0h.jpg",
+      "AssetFile": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\d06b2cc3-bad3-41ae-a00d-923b027891b7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "54411"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 18:06:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dt71uk9o0h"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/d06b2cc3-bad3-41ae-a00d-923b027891b7.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/d06b2cc3-bad3-41ae-a00d-923b027891b7.jpg",
+      "AssetFile": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\d06b2cc3-bad3-41ae-a00d-923b027891b7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "54411"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 18:06:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0RvIU4fFfbJHUKpHYsVgjljxJvGXIqM4QkvcNW3U32c="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/f0e76bc7-b92e-4b86-b508-864d9418224f.of8walgng8.png",
+      "AssetFile": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\f0e76bc7-b92e-4b86-b508-864d9418224f.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1614403"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TI/ASX9w8Saal2zQuFKDGBsiXD3mFwcYKV6hhyMxhMw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 16:31:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "of8walgng8"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/f0e76bc7-b92e-4b86-b508-864d9418224f.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TI/ASX9w8Saal2zQuFKDGBsiXD3mFwcYKV6hhyMxhMw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/f0e76bc7-b92e-4b86-b508-864d9418224f.png",
+      "AssetFile": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\f0e76bc7-b92e-4b86-b508-864d9418224f.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1614403"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TI/ASX9w8Saal2zQuFKDGBsiXD3mFwcYKV6hhyMxhMw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 16:31:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TI/ASX9w8Saal2zQuFKDGBsiXD3mFwcYKV6hhyMxhMw="
+        }
+      ]
+    }
+  ]
+}

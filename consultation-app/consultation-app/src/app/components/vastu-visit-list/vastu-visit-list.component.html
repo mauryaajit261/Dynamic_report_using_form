@@ -1,0 +1,187 @@
+<div class="vastu-visit-list">
+  <mat-card class="main-card">
+    <mat-card-header>
+      <mat-card-title>
+        <div class="header-row">
+          <h1>🛕 Vastu Visit Records</h1>
+          <button mat-raised-button color="primary" [routerLink]="['/vastu-visit-form']">
+            <mat-icon>add</mat-icon> Add New Visit
+          </button>
+        </div>
+      </mat-card-title>
+      <mat-card-subtitle>|| Om Sri Sairam ||</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <ng-template #loading>
+        <div class="loading">
+          <p>Loading visits...</p>
+        </div>
+      </ng-template>
+    
+      <ng-template #noRecords>
+        <div class="no-records">
+          <p>No Vastu visit records found. Create a new visit from the form.</p>
+        </div>
+      </ng-template>
+      <ng-container *ngIf="visits$ | async as visits; else loading">
+        <ng-container *ngIf="visits.length > 0; else noRecords">
+          <mat-accordion multi>
+            <mat-expansion-panel *ngFor="let visit of visits">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  {{ visit.clientName || 'No Name' }}
+                </mat-panel-title>
+                <mat-panel-description>
+                  {{ formatDate(visit.date) }} | {{ visit.buildingType || 'Unknown' }}
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+            
+              <div class="panel-content">
+            
+                <!-- 👤 Client Info -->
+                <section>
+                  <h3>👤 Client Information</h3>
+                  <div class="info-grid">
+                    <div><strong>Date:</strong> {{ formatDate(visit.date) }}</div>
+                    <div><strong>Name:</strong> {{ visit.clientName || 'N/A' }}</div>
+                    <div><strong>Email:</strong> {{ visit.email || 'N/A' }}</div>
+                    <div><strong>Phone:</strong> {{ visit.contactNo || 'N/A' }}</div>
+                    <div><strong>Address:</strong> {{ visit.address || 'N/A' }}</div>
+                    <div><strong>Pincode:</strong> {{ visit.pinCode || 'N/A' }}</div>
+                    <div><strong>Occupation:</strong> {{ visit.occupation || 'N/A' }}</div>
+                    <div><strong>Qualification:</strong> {{ visit.qualification || 'N/A' }}</div>
+                  </div>
+                </section>
+            
+                <mat-divider></mat-divider>
+            
+                <!-- 👫 Family Info -->
+                <section>
+                  <h3>👪 Family Details</h3>
+                  <div class="info-grid">
+                    <div><strong>Owner:</strong> {{ visit.ownerName || 'N/A' }}</div>
+                    <div><strong>DOB:</strong> {{ visit.dateOfBirth || 'N/A' }}</div>
+                    <div><strong>Birthplace:</strong> {{ visit.birthPlace || 'N/A' }}</div>
+                    <div><strong>Birth Time:</strong> {{ visit.birthTime || 'N/A' }}</div>
+                    <div><strong>Spouse:</strong> {{ visit.spouseName || 'N/A' }}</div>
+                    <div><strong>Spouse DOB:</strong> {{ visit.spouseDateOfBirth || 'N/A' }}</div>
+                    <div><strong>Spouse Birthplace:</strong> {{ visit.spouseBirthPlace || 'N/A' }}</div>
+                    <div><strong>Spouse Birth Time:</strong> {{ visit.spouseBirthTime || 'N/A' }}</div>
+                  </div>
+                  <div *ngIf="visit.familyMembers?.length">
+                    <h4>👨‍👩‍👧 Family Members:</h4>
+                    <ul>
+                      <li *ngFor="let member of visit.familyMembers">
+                        {{ member.name }} ({{ member.relation }}), Age: {{ member.age }}, Problem: {{ member.presentProblem }}
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+            
+                <mat-divider></mat-divider>
+            
+                <!-- 🏡 Property Details -->
+                <section>
+                  <h3>🏡 Property Details</h3>
+                  <div class="info-grid">
+                    <div><strong>Building Name:</strong> {{ visit.buildingName || 'N/A' }}</div>
+                    <div><strong>Construction Year:</strong> {{ visit.constructionYear || 'N/A' }}</div>
+                    <div><strong>Building Type:</strong> {{ visit.buildingType || 'N/A' }}</div>
+                    <div><strong>Area:</strong> {{ visit.area || 'N/A' }} sq ft</div>
+                    <div><strong>Construction Area:</strong> {{ visit.constructionArea || 'N/A' }} sq ft</div>
+                    <div><strong>Length:</strong> {{ visit.length || 'N/A' }} ft</div>
+                    <div><strong>Width:</strong> {{ visit.width || 'N/A' }} ft</div>
+                    <div><strong>Land Shape:</strong> {{ visit.landShape || 'N/A' }}</div>
+                    <div><strong>Land Slope:</strong> {{ visit.landSlope || 'N/A' }}</div>
+                    <div><strong>Closed Directions:</strong> {{ visit.closedDirections || 'N/A' }}</div>
+                    <div><strong>Open Directions:</strong> {{ visit.openDirections || 'N/A' }}</div>
+                    <div><strong>North Shift Degree:</strong> {{ visit.northShiftDegree || 'N/A' }}</div>
+                    <div><strong>Vithishula:</strong> {{ visit.isVithishula ? 'Yes' : 'No' }}</div>
+                    <div><strong>Vithishula Direction:</strong> {{ visit.vithishulaDirection || 'N/A' }}</div>
+                    <div><strong>Surrounding Roads:</strong> {{ visit.surroundingRoads || 'N/A' }}</div>
+                  </div>
+                </section>
+            
+                <mat-divider></mat-divider>
+            
+                <!-- 📐 Internal Arrangement -->
+                <section>
+                  <h3>📐 Internal Arrangements</h3>
+                  <div class="info-grid">
+                    <div><strong>Internal Arrangement:</strong> {{ visit.internalArrangement || 'N/A' }}</div>
+                    <div><strong>Compound Entry:</strong> {{ visit.compoundEntry || 'N/A' }}</div>
+                    <div><strong>Plot Entry:</strong> {{ visit.plotEntryDirectionAndPada || 'N/A' }}</div>
+                    <div><strong>Porch Direction:</strong> {{ visit.directionOfPorch || 'N/A' }}</div>
+                    <div><strong>Staircase:</strong> {{ visit.staircaseDirectionAndType || 'N/A' }}</div>
+                    <div><strong>Living Room:</strong> {{ visit.livingRoom || 'N/A' }}</div>
+                    <div><strong>Kitchen:</strong> {{ visit.kitchenDetails || 'N/A' }}</div>
+                    <div><strong>Bedroom:</strong> {{ visit.bedroomDetails || 'N/A' }}</div>
+                    <div><strong>Study Room:</strong> {{ visit.studyRoomDetails || 'N/A' }}</div>
+                    <div><strong>Prayer Room / Locker:</strong> {{ visit.lockerPrayerRoom || 'N/A' }}</div>
+                    <div><strong>Bathroom / Toilet:</strong> {{ visit.bathroomToilet || 'N/A' }}</div>
+                    <div><strong>Internal Staircase:</strong> {{ visit.internalStaircase || 'N/A' }}</div>
+                    <div><strong>Mirrors:</strong> {{ visit.mirrors || 'N/A' }}</div>
+                    <div><strong>Electric Meter:</strong> {{ visit.electricMeterAndSwitchBoard || 'N/A' }}</div>
+                    <div><strong>Tap:</strong> {{ visit.tap || 'N/A' }}</div>
+                    <div><strong>Lawn Direction:</strong> {{ visit.lawnDirection || 'N/A' }}</div>
+                  </div>
+                </section>
+            
+                <mat-divider></mat-divider>
+            
+                <!-- ⚛️ Energy and Observation -->
+                <section>
+                  <h3>⚛️ Energy & Observations</h3>
+                  <div class="info-grid">
+                    <div><strong>Brahmasthana:</strong> {{ visit.brahmasthanaObservations || 'N/A' }}</div>
+                    <div><strong>Toilets Location:</strong> {{ visit.toiletsLocationAndDirections || 'N/A' }}</div>
+                    <div><strong>Septic Tank:</strong> {{ visit.septicTankLocationAndDirection || 'N/A' }}</div>
+                    <div><strong>Basement Location:</strong> {{ visit.basementLocationAndDirection || 'N/A' }}</div>
+                    <div><strong>About Direction:</strong> {{ visit.aboutDirectionOfVastu || 'N/A' }}</div>
+                    <div><strong>Micro Energies:</strong> {{ visit.microEnergies || 'N/A' }}</div>
+                    <div><strong>Geopathic Stress:</strong> {{ visit.geopathicStress ? 'Yes' : 'No' }}</div>
+                    <div><strong>Total Positive Energy:</strong> {{ visit.totalPositiveEnergy || 'N/A' }}</div>
+                    <div><strong>Total Negative Energy:</strong> {{ visit.totalNegativeEnergy || 'N/A' }}</div>
+                    <div><strong>Total Positive Oorja:</strong> {{ visit.totalPositiveOorja || 'N/A' }}</div>
+                    <div><strong>Total Negative Oorja:</strong> {{ visit.totalNegativeOorja || 'N/A' }}</div>
+                    <div><strong>Compatibility:</strong> {{ visit.compatibility || 'N/A' }}</div>
+                    <div><strong>Reason of Negativity:</strong> {{ visit.reasonOfNegativity || 'N/A' }}</div>
+                  </div>
+                </section>
+            
+                <mat-divider></mat-divider>
+            
+                <!-- 🧿 Remedies and Conclusion -->
+                <section>
+                  <h3>🧿 Remedies & Report</h3>
+                  <div class="info-grid">
+                    <div><strong>First Step Remedy:</strong> {{ visit.firstStepRemedy || 'N/A' }}</div>
+                    <div><strong>Second Step Remedy:</strong> {{ visit.secondStepRemedy || 'N/A' }}</div>
+                    <div><strong>Third Step Remedy:</strong> {{ visit.thirdStepRemedy || 'N/A' }}</div>
+                    <div><strong>First Line of Treatment:</strong> {{ visit.firstLineOfTreatment || 'N/A' }}</div>
+                    <div><strong>Advance Paid:</strong> {{ visit.advance || 'N/A' }}</div>
+                    <div><strong>Report Prepared By:</strong> {{ visit.reportPreparedBy || 'N/A' }}</div>
+                    <div><strong>Report Date:</strong> {{ formatDate(visit.reportDate) }}</div>
+                  </div>
+                </section>
+            
+                <!-- Action Buttons -->
+                <div class="btn-row">
+                  <button mat-raised-button color="primary" [routerLink]="['/vastu-visit-form', visit.id]" (click)="$event.stopPropagation()">
+                    <mat-icon>edit</mat-icon> Edit
+                  </button>
+                  <button mat-raised-button color="warn" (click)="deleteVisit(visit.id); $event.stopPropagation();">
+                    <mat-icon>delete</mat-icon> Delete
+                  </button>
+                  <button mat-raised-button color="primary" (click)="generateReport(visit); $event.stopPropagation()">
+                    <mat-icon>picture_as_pdf</mat-icon> Generate Report
+                  </button>
+                <!--  <button mat-raised-button color="accent" (click)="openEmailDialog(visit); $event.stopPropagation();">
+                    <mat-icon>email</mat-icon> Send Email
+                  </button>-->
+                </div>
+            
+              </div>
+            </mat-expansion-panel>
+            

@@ -1,0 +1,2092 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "vastuformAPI",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Consultation": {
+      "get": {
+        "tags": [
+          "Consultation"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Consultation"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Consultation"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Consultation"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Consultation"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Consultation"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Consultation"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Consultation"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Consultation/{id}": {
+      "get": {
+        "tags": [
+          "Consultation"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Consultation"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Consultation"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Consultation"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Consultation"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Consultation"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Consultation"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Consultation"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Consultation"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TaskImage/upload": {
+      "post": {
+        "tags": [
+          "TaskImage"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "vastuVisitId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              },
+              "encoding": {
+                "vastuVisitId": {
+                  "style": "form"
+                },
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TaskImage/{vastuVisitId}": {
+      "get": {
+        "tags": [
+          "TaskImage"
+        ],
+        "parameters": [
+          {
+            "name": "vastuVisitId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/VaastuVisit2": {
+      "post": {
+        "tags": [
+          "VaastuVisit2"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VastuVisit2"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VastuVisit2"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VastuVisit2"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "VaastuVisit2"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/VaastuVisit2/{id}": {
+      "get": {
+        "tags": [
+          "VaastuVisit2"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "VaastuVisit2"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VastuVisit2"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VastuVisit2"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VastuVisit2"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "VaastuVisit2"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/VastuEnergy": {
+      "get": {
+        "tags": [
+          "VastuEnergy"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VastuEnergy"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VastuEnergy"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VastuEnergy"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "VastuEnergy"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VastuEnergy"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VastuEnergy"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VastuEnergy"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VastuEnergy"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VastuEnergy"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VastuEnergy"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/VastuEnergy/{id}": {
+      "get": {
+        "tags": [
+          "VastuEnergy"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VastuEnergy"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VastuEnergy"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VastuEnergy"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "VastuEnergy"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VastuEnergy"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VastuEnergy"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VastuEnergy"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "VastuEnergy"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/VastuVisit": {
+      "get": {
+        "tags": [
+          "VastuVisit"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VastuVisit"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VastuVisit"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VastuVisit"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "VastuVisit"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VastuVisit"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VastuVisit"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VastuVisit"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VastuVisit"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VastuVisit"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VastuVisit"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/VastuVisit/{id}": {
+      "get": {
+        "tags": [
+          "VastuVisit"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VastuVisit"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VastuVisit"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VastuVisit"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "VastuVisit"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VastuVisit"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VastuVisit"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VastuVisit"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "VastuVisit"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/WeatherForecast": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "operationId": "GetWeatherForecast",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Consultation": {
+        "required": [
+          "address",
+          "contactNo",
+          "date",
+          "dateOfBirth",
+          "email",
+          "name",
+          "pincode",
+          "problem",
+          "questions"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "name": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string"
+          },
+          "address": {
+            "maxLength": 255,
+            "minLength": 0,
+            "type": "string"
+          },
+          "pincode": {
+            "minLength": 1,
+            "pattern": "^[0-9]{6}$",
+            "type": "string"
+          },
+          "contactNo": {
+            "minLength": 1,
+            "pattern": "^[0-9]{10}$",
+            "type": "string"
+          },
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "questions": {
+            "maxLength": 500,
+            "minLength": 0,
+            "type": "string"
+          },
+          "problem": {
+            "maxLength": 500,
+            "minLength": 0,
+            "type": "string"
+          },
+          "sahasaraChakra": {
+            "type": "string",
+            "nullable": true
+          },
+          "ajnaChakra": {
+            "type": "string",
+            "nullable": true
+          },
+          "vishuddhaChakra": {
+            "type": "string",
+            "nullable": true
+          },
+          "anahatChakra": {
+            "type": "string",
+            "nullable": true
+          },
+          "manipuraChakra": {
+            "type": "string",
+            "nullable": true
+          },
+          "svaddhisthanaChakra": {
+            "type": "string",
+            "nullable": true
+          },
+          "muldharaChakra": {
+            "type": "string",
+            "nullable": true
+          },
+          "auraEnergy": {
+            "type": "string",
+            "nullable": true
+          },
+          "bodyAuraPercentage": {
+            "type": "string",
+            "nullable": true
+          },
+          "luckyColor": {
+            "type": "string",
+            "nullable": true
+          },
+          "luckyNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "colorToAvoid": {
+            "type": "string",
+            "nullable": true
+          },
+          "numberToAvoid": {
+            "type": "string",
+            "nullable": true
+          },
+          "personality": {
+            "type": "string",
+            "nullable": true
+          },
+          "gemstone": {
+            "type": "string",
+            "nullable": true
+          },
+          "crystal": {
+            "type": "string",
+            "nullable": true
+          },
+          "oorjaLiquid": {
+            "type": "string",
+            "nullable": true
+          },
+          "soap": {
+            "type": "string",
+            "nullable": true
+          },
+          "salt": {
+            "type": "string",
+            "nullable": true
+          },
+          "anyOther": {
+            "type": "string",
+            "nullable": true
+          },
+          "observationsAndRemedies": {
+            "maxLength": 1000,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FamilyMember": {
+        "type": "object",
+        "properties": {
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "relation": {
+            "type": "string",
+            "nullable": true
+          },
+          "age": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "presentProblem": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FamilyMember1": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "relation": {
+            "type": "string",
+            "nullable": true
+          },
+          "age": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "presentProblem": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LechtareAntenaReading": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "value": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "vastuVisitId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MicroEnergies": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "moneyAttraction": {
+            "type": "string",
+            "nullable": true
+          },
+          "jealousy": {
+            "type": "string",
+            "nullable": true
+          },
+          "prosperity": {
+            "type": "string",
+            "nullable": true
+          },
+          "harmony": {
+            "type": "string",
+            "nullable": true
+          },
+          "happiness": {
+            "type": "string",
+            "nullable": true
+          },
+          "annapurna": {
+            "type": "string",
+            "nullable": true
+          },
+          "health": {
+            "type": "string",
+            "nullable": true
+          },
+          "customerAttraction": {
+            "type": "string",
+            "nullable": true
+          },
+          "progenyIncrease": {
+            "type": "string",
+            "nullable": true
+          },
+          "customerSatisfaction": {
+            "type": "string",
+            "nullable": true
+          },
+          "progenyHappiness": {
+            "type": "string",
+            "nullable": true
+          },
+          "marriageLifeHappiness": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TaskImage": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "imagePath": {
+            "type": "string",
+            "nullable": true
+          },
+          "vastuVisitId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vastuVisit": {
+            "$ref": "#/components/schemas/VastuVisit"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ToiletDirection": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "direction": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VastuEnergy": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "date": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "nullable": true
+          },
+          "contactNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "healthIssues": {
+            "type": "string",
+            "nullable": true
+          },
+          "sahasaraChakra": {
+            "type": "string",
+            "nullable": true
+          },
+          "ajnaChakra": {
+            "type": "string",
+            "nullable": true
+          },
+          "vishuddhaChakra": {
+            "type": "string",
+            "nullable": true
+          },
+          "anahatChakra": {
+            "type": "string",
+            "nullable": true
+          },
+          "manipuraChakra": {
+            "type": "string",
+            "nullable": true
+          },
+          "svaddhisthanaChakra": {
+            "type": "string",
+            "nullable": true
+          },
+          "muldharaChakra": {
+            "type": "string",
+            "nullable": true
+          },
+          "auraEnergy": {
+            "type": "string",
+            "nullable": true
+          },
+          "auraLength": {
+            "type": "string",
+            "nullable": true
+          },
+          "consultantName": {
+            "type": "string",
+            "nullable": true
+          },
+          "officeAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "contactNos": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VastuVisit": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "time": {
+            "type": "string",
+            "nullable": true
+          },
+          "clientName": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "pinCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "contactNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "buildingName": {
+            "type": "string",
+            "nullable": true
+          },
+          "constructionYear": {
+            "type": "string",
+            "nullable": true
+          },
+          "buildingType": {
+            "type": "string",
+            "nullable": true
+          },
+          "area": {
+            "type": "string",
+            "nullable": true
+          },
+          "constructionArea": {
+            "type": "string",
+            "nullable": true
+          },
+          "length": {
+            "type": "string",
+            "nullable": true
+          },
+          "width": {
+            "type": "string",
+            "nullable": true
+          },
+          "ownerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "birthPlace": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "occupation": {
+            "type": "string",
+            "nullable": true
+          },
+          "qualification": {
+            "type": "string",
+            "nullable": true
+          },
+          "spouseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "spouseDateOfBirth": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "spouseBirthPlace": {
+            "type": "string",
+            "nullable": true
+          },
+          "spouseBirthTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "familyMembers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FamilyMember"
+            },
+            "nullable": true
+          },
+          "specialIncidents": {
+            "type": "string",
+            "nullable": true
+          },
+          "landShape": {
+            "type": "string",
+            "nullable": true
+          },
+          "landSlope": {
+            "type": "string",
+            "nullable": true
+          },
+          "closedDirections": {
+            "type": "string",
+            "nullable": true
+          },
+          "openDirections": {
+            "type": "string",
+            "nullable": true
+          },
+          "northShiftDegree": {
+            "type": "string",
+            "nullable": true
+          },
+          "surroundingRoads": {
+            "type": "string",
+            "nullable": true
+          },
+          "isVithishula": {
+            "type": "boolean"
+          },
+          "vithishulaDirection": {
+            "type": "string",
+            "nullable": true
+          },
+          "internalArrangement": {
+            "type": "string",
+            "nullable": true
+          },
+          "compoundEntry": {
+            "type": "string",
+            "nullable": true
+          },
+          "plotSurroundingObservations": {
+            "type": "string",
+            "nullable": true
+          },
+          "pit": {
+            "type": "string",
+            "nullable": true
+          },
+          "hill": {
+            "type": "string",
+            "nullable": true
+          },
+          "temple": {
+            "type": "string",
+            "nullable": true
+          },
+          "publicPlace": {
+            "type": "string",
+            "nullable": true
+          },
+          "plotEntryDirectionAndPada": {
+            "type": "string",
+            "nullable": true
+          },
+          "compoundLengthHeight": {
+            "type": "string",
+            "nullable": true
+          },
+          "directionOfPorch": {
+            "type": "string",
+            "nullable": true
+          },
+          "undergroundWaterTank": {
+            "type": "string",
+            "nullable": true
+          },
+          "borewell": {
+            "type": "string",
+            "nullable": true
+          },
+          "staircaseDirectionAndType": {
+            "type": "string",
+            "nullable": true
+          },
+          "parking": {
+            "type": "string",
+            "nullable": true
+          },
+          "surroundingTrees": {
+            "type": "string",
+            "nullable": true
+          },
+          "lawnDirection": {
+            "type": "string",
+            "nullable": true
+          },
+          "tap": {
+            "type": "string",
+            "nullable": true
+          },
+          "electricMeterAndSwitchBoard": {
+            "type": "string",
+            "nullable": true
+          },
+          "livingRoom": {
+            "type": "string",
+            "nullable": true
+          },
+          "bhavanEntry": {
+            "type": "string",
+            "nullable": true
+          },
+          "internalStaircase": {
+            "type": "string",
+            "nullable": true
+          },
+          "mirrors": {
+            "type": "string",
+            "nullable": true
+          },
+          "kitchenDetails": {
+            "type": "string",
+            "nullable": true
+          },
+          "studyRoomDetails": {
+            "type": "string",
+            "nullable": true
+          },
+          "bedroomDetails": {
+            "type": "string",
+            "nullable": true
+          },
+          "lockerPrayerRoom": {
+            "type": "string",
+            "nullable": true
+          },
+          "bathroomToilet": {
+            "type": "string",
+            "nullable": true
+          },
+          "septicTankBasement": {
+            "type": "string",
+            "nullable": true
+          },
+          "liftDirection": {
+            "type": "string",
+            "nullable": true
+          },
+          "brahmasthanaObservations": {
+            "type": "string",
+            "nullable": true
+          },
+          "toiletsLocationAndDirections": {
+            "type": "string",
+            "nullable": true
+          },
+          "septicTankLocationAndDirection": {
+            "type": "string",
+            "nullable": true
+          },
+          "basementLocationAndDirection": {
+            "type": "string",
+            "nullable": true
+          },
+          "aboutDirectionOfVastu": {
+            "type": "string",
+            "nullable": true
+          },
+          "lechtareAntenaValues": {
+            "type": "string",
+            "nullable": true
+          },
+          "dowsingReport": {
+            "type": "string",
+            "nullable": true
+          },
+          "vastuLandDefects": {
+            "type": "string",
+            "nullable": true
+          },
+          "goodForLivingBusiness": {
+            "type": "boolean"
+          },
+          "vastuEnergy": {
+            "type": "string",
+            "nullable": true
+          },
+          "reasonOfNegativity": {
+            "type": "string",
+            "nullable": true
+          },
+          "geopathicStress": {
+            "type": "boolean"
+          },
+          "noOfPoints": {
+            "type": "string",
+            "nullable": true
+          },
+          "ratnaNikshap": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalPositiveEnergy": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalNegativeEnergy": {
+            "type": "string",
+            "nullable": true
+          },
+          "compatibility": {
+            "type": "string",
+            "nullable": true
+          },
+          "microEnergies": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstStepRemedy": {
+            "type": "string",
+            "nullable": true
+          },
+          "secondStepRemedy": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstLineOfTreatment": {
+            "type": "string",
+            "nullable": true
+          },
+          "advance": {
+            "type": "string",
+            "nullable": true
+          },
+          "thirdStepRemedy": {
+            "type": "string",
+            "nullable": true
+          },
+          "negativeIR": {
+            "type": "string",
+            "nullable": true
+          },
+          "negativeUV": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalPositiveOorja": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalNegativeOorja": {
+            "type": "string",
+            "nullable": true
+          },
+          "reportPreparedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "sign": {
+            "type": "string",
+            "nullable": true
+          },
+          "reportDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TaskImage"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VastuVisit2": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "visitDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "clientName": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "areaPinCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "contactNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "buildingName": {
+            "type": "string",
+            "nullable": true
+          },
+          "yearOfConstruction": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "buildingType": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalAreaSqFt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "constructionAreaSqFt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "length": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "width": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "ownerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "ownerDOB": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "ownerBirthPlace": {
+            "type": "string",
+            "nullable": true
+          },
+          "ownerBirthTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "occupation": {
+            "type": "string",
+            "nullable": true
+          },
+          "qualification": {
+            "type": "string",
+            "nullable": true
+          },
+          "spouseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "spouseDOB": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "spouseBirthPlace": {
+            "type": "string",
+            "nullable": true
+          },
+          "spouseBirthTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "familyMembers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FamilyMember1"
+            },
+            "nullable": true
+          },
+          "specialIncident": {
+            "type": "string",
+            "nullable": true
+          },
+          "shapeOfLand": {
+            "type": "string",
+            "nullable": true
+          },
+          "slopeOfLand": {
+            "type": "string",
+            "nullable": true
+          },
+          "closedDirections": {
+            "type": "string",
+            "nullable": true
+          },
+          "openDirections": {
+            "type": "string",
+            "nullable": true
+          },
+          "northDirectionShift": {
+            "type": "string",
+            "nullable": true
+          },
+          "surroundingRoads": {
+            "type": "string",
+            "nullable": true
+          },
+          "isVithishula": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "vithishulaDirection": {
+            "type": "string",
+            "nullable": true
+          },
+          "internalArrangement": {
+            "type": "string",
+            "nullable": true
+          },
+          "compoundEntry": {
+            "type": "string",
+            "nullable": true
+          },
+          "plotSurroundingObservations": {
+            "type": "string",
+            "nullable": true
+          },
+          "pit": {
+            "type": "string",
+            "nullable": true
+          },
+          "hill": {
+            "type": "string",
+            "nullable": true
+          },
+          "temple": {
+            "type": "string",
+            "nullable": true
+          },
+          "publicPlace": {
+            "type": "string",
+            "nullable": true
+          },
+          "plotEntryDirection": {
+            "type": "string",
+            "nullable": true
+          },
+          "compoundLengthHeight": {
+            "type": "string",
+            "nullable": true
+          },
+          "porchDirection": {
+            "type": "string",
+            "nullable": true
+          },
+          "undergroundWaterTank": {
+            "type": "string",
+            "nullable": true
+          },
+          "borewell": {
+            "type": "string",
+            "nullable": true
+          },
+          "staircaseDirection": {
+            "type": "string",
+            "nullable": true
+          },
+          "parking": {
+            "type": "string",
+            "nullable": true
+          },
+          "surroundingTrees": {
+            "type": "string",
+            "nullable": true
+          },
+          "lawnDirection": {
+            "type": "string",
+            "nullable": true
+          },
+          "tap": {
+            "type": "string",
+            "nullable": true
+          },
+          "electricMeter": {
+            "type": "string",
+            "nullable": true
+          },
+          "livingRoom": {
+            "type": "string",
+            "nullable": true
+          },
+          "bhavanEntry": {
+            "type": "string",
+            "nullable": true
+          },
+          "houseType": {
+            "type": "string",
+            "nullable": true
+          },
+          "internalStaircase": {
+            "type": "string",
+            "nullable": true
+          },
+          "mirrors": {
+            "type": "string",
+            "nullable": true
+          },
+          "kitchen": {
+            "type": "string",
+            "nullable": true
+          },
+          "platform": {
+            "type": "string",
+            "nullable": true
+          },
+          "stove": {
+            "type": "string",
+            "nullable": true
+          },
+          "basin": {
+            "type": "string",
+            "nullable": true
+          },
+          "studyRoom": {
+            "type": "string",
+            "nullable": true
+          },
+          "bookshelf": {
+            "type": "string",
+            "nullable": true
+          },
+          "window": {
+            "type": "string",
+            "nullable": true
+          },
+          "studyTableFacing": {
+            "type": "string",
+            "nullable": true
+          },
+          "bedroom": {
+            "type": "string",
+            "nullable": true
+          },
+          "bedDirection": {
+            "type": "string",
+            "nullable": true
+          },
+          "sleepingDirection": {
+            "type": "string",
+            "nullable": true
+          },
+          "locker": {
+            "type": "string",
+            "nullable": true
+          },
+          "prayerRoom": {
+            "type": "string",
+            "nullable": true
+          },
+          "bathroom": {
+            "type": "string",
+            "nullable": true
+          },
+          "toilet": {
+            "type": "string",
+            "nullable": true
+          },
+          "septicTank": {
+            "type": "string",
+            "nullable": true
+          },
+          "basement": {
+            "type": "string",
+            "nullable": true
+          },
+          "liftDirection": {
+            "type": "string",
+            "nullable": true
+          },
+          "brahmasthanaObservation1": {
+            "type": "string",
+            "nullable": true
+          },
+          "brahmasthanaObservation2": {
+            "type": "string",
+            "nullable": true
+          },
+          "brahmasthanaObservation3": {
+            "type": "string",
+            "nullable": true
+          },
+          "brahmasthanaObservation4": {
+            "type": "string",
+            "nullable": true
+          },
+          "brahmasthanaObservation5": {
+            "type": "string",
+            "nullable": true
+          },
+          "toilets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ToiletDirection"
+            },
+            "nullable": true
+          },
+          "septicTankDirection": {
+            "type": "string",
+            "nullable": true
+          },
+          "basementDirection": {
+            "type": "string",
+            "nullable": true
+          },
+          "otherObservations": {
+            "type": "string",
+            "nullable": true
+          },
+          "lechtareAntenaReadings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LechtareAntenaReading"
+            },
+            "nullable": true
+          },
+          "dowsingReport": {
+            "type": "string",
+            "nullable": true
+          },
+          "vastuLandDefects": {
+            "type": "string",
+            "nullable": true
+          },
+          "goodFor": {
+            "type": "string",
+            "nullable": true
+          },
+          "vastuEnergy": {
+            "type": "string",
+            "nullable": true
+          },
+          "shalyaDosh": {
+            "type": "string",
+            "nullable": true
+          },
+          "directionDefect": {
+            "type": "string",
+            "nullable": true
+          },
+          "landDefect": {
+            "type": "string",
+            "nullable": true
+          },
+          "vastuVibration": {
+            "type": "string",
+            "nullable": true
+          },
+          "humanEntity": {
+            "type": "string",
+            "nullable": true
+          },
+          "aamanviyaVastu": {
+            "type": "string",
+            "nullable": true
+          },
+          "entity": {
+            "type": "string",
+            "nullable": true
+          },
+          "thinking": {
+            "type": "string",
+            "nullable": true
+          },
+          "reasonOfNegativity": {
+            "type": "string",
+            "nullable": true
+          },
+          "geopathicStress": {
+            "type": "string",
+            "nullable": true
+          },
+          "noOfPoints": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "ratnaNikshap": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalPositiveEnergy": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "totalNegativeEnergy": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "compatibility": {
+            "type": "string",
+            "nullable": true
+          },
+          "microEnergies": {
+            "$ref": "#/components/schemas/MicroEnergies"
+          },
+          "firstStepRemedy": {
+            "type": "string",
+            "nullable": true
+          },
+          "secondStepRemedy": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstLineTreatment": {
+            "type": "string",
+            "nullable": true
+          },
+          "advance": {
+            "type": "string",
+            "nullable": true
+          },
+          "thirdStepRemedy": {
+            "type": "string",
+            "nullable": true
+          },
+          "negativeIR": {
+            "type": "string",
+            "nullable": true
+          },
+          "negativeUV": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalPositiveOorja": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalNegativeOorja": {
+            "type": "string",
+            "nullable": true
+          },
+          "reportPreparedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "reportDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "WeatherForecast": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "temperatureC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "temperatureF": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

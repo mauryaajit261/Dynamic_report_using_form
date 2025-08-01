@@ -1,0 +1,53 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\1f1f39c3-1535-41af-9cf2-2a496ed9a18a.png",
+      "PackagePath": "staticwebassets\\uploads\\1f1f39c3-1535-41af-9cf2-2a496ed9a18a.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\3f584071-517c-4c00-bfac-fde5253d4d53.png",
+      "PackagePath": "staticwebassets\\uploads\\3f584071-517c-4c00-bfac-fde5253d4d53.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\a6d78e7a-efa6-451a-bce2-96a74b6acbc4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\a6d78e7a-efa6-451a-bce2-96a74b6acbc4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\af2c2c86-41ee-4504-ac11-2dea61531899.jpg",
+      "PackagePath": "staticwebassets\\uploads\\af2c2c86-41ee-4504-ac11-2dea61531899.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\b73d01f1-9b15-43ea-b310-d1fe7fbd14e3.jpg",
+      "PackagePath": "staticwebassets\\uploads\\b73d01f1-9b15-43ea-b310-d1fe7fbd14e3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\d06b2cc3-bad3-41ae-a00d-923b027891b7.jpg",
+      "PackagePath": "staticwebassets\\uploads\\d06b2cc3-bad3-41ae-a00d-923b027891b7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Downloads\\vastu-form\\Final_Form\\vastuformAPI\\vastuformAPI\\wwwroot\\uploads\\f0e76bc7-b92e-4b86-b508-864d9418224f.png",
+      "PackagePath": "staticwebassets\\uploads\\f0e76bc7-b92e-4b86-b508-864d9418224f.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.vastuformAPI.props",
+      "PackagePath": "build\\vastuformAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.vastuformAPI.props",
+      "PackagePath": "buildMultiTargeting\\vastuformAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.vastuformAPI.props",
+      "PackagePath": "buildTransitive\\vastuformAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.vastuformAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.vastuformAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,163 @@
+<div class="vastu-energy-scan-list">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        <div class="header-content">
+          <h1>Vastu Energy Scan Records</h1>
+          <button mat-raised-button color="primary" [routerLink]="['/vastu-energy-scan']">
+            <mat-icon>add</mat-icon> New Energy Scan
+          </button>
+        </div>
+      </mat-card-title>
+      <mat-card-subtitle>|| Om Sri Sairam ||</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <ng-container *ngIf="scans$ | async as scans; else loading">
+        <div *ngIf="scans.length > 0" class="scan-records">
+          <mat-accordion>
+            <mat-expansion-panel *ngFor="let scan of scans">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  {{ scan.name }}
+                </mat-panel-title>
+                <mat-panel-description>
+                  {{ formatDate(scan.date) }} | Energy Level: {{ calculateEnergyLevel(scan) }}%
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+
+              <div class="scan-details">
+
+                <!-- Client Information -->
+                <div class="personal-info">
+                  <h3>Client Information</h3>
+                  <div class="info-grid">
+                    <div class="info-item"><label>Date:</label><span>{{ formatDate(scan.date) }}</span></div>
+                    <div class="info-item"><label>Name:</label><span>{{ scan.name }}</span></div>
+                    <div class="info-item"><label>Email:</label><span>{{ scan.email }}</span></div>
+                    <div class="info-item"><label>Contact No:</label><span>{{ scan.contactNo }}</span></div>
+                    <div class="info-item"><label>Date of Birth:</label><span>{{ formatDate(scan.dateOfBirth) }}</span></div>
+                 
+                  </div>
+                  <div class="full-width-info"><label>Address:</label><p>{{ scan.address }}</p></div>
+                  <div class="full-width-info"><label>Health Issues:</label><p>{{ scan.healthIssues }}</p></div>
+                </div>
+
+                <mat-divider></mat-divider>
+
+                <!-- Energy Analysis -->
+                <div class="energy-analysis">
+                  <h3>Energy Analysis</h3>
+                  <div class="energy-level">
+                    <label>Energy Level:</label>
+                    <div class="energy-bar">
+                      <mat-progress-bar
+                        mode="determinate"
+                        [value]="calculateEnergyLevel(scan)"
+                        [color]="getEnergyLevelColor(calculateEnergyLevel(scan))">
+                      </mat-progress-bar>
+                      <span>{{ calculateEnergyLevel(scan) }}%</span>
+                    </div>
+                    <p class="energy-status">Status: {{ getEnergyLevelStatus(calculateEnergyLevel(scan)) }}</p>
+                  </div>
+              
+                </div>
+
+                <mat-divider></mat-divider>
+
+                <!-- Chakra Readings -->
+                <div class="chakra-info">
+                  <h3>Chakra Readings</h3>
+                  <div class="info-grid">
+                    <div class="info-item"><label>Sahasara (Crown):</label><span>{{ scan.sahasaraChakra }}</span></div>
+                    <div class="info-item"><label>Ajna (Third Eye):</label><span>{{ scan.ajnaChakra }}</span></div>
+                    <div class="info-item"><label>Vishuddha (Throat):</label><span>{{ scan.vishuddhaChakra }}</span></div>
+                    <div class="info-item"><label>Anahat (Heart):</label><span>{{ scan.anahatChakra }}</span></div>
+                    <div class="info-item"><label>Manipura (Solar Plexus):</label><span>{{ scan.manipuraChakra }}</span></div>
+                    <div class="info-item"><label>Svaddhisthana (Sacral):</label><span>{{ scan.svaddhisthanaChakra }}</span></div>
+                    <div class="info-item"><label>Muldhara (Root):</label><span>{{ scan.muldharaChakra }}</span></div>
+                  </div>
+                </div>
+
+                <mat-divider></mat-divider>
+
+               
+
+                <mat-divider></mat-divider>
+
+                <!-- Remedies & Observations -->
+                <div class="remedies-observations">
+                  <h3>Aura</h3>
+                  <div class="full-width-info">
+                    <label>Remedies:</label>
+                    <p>{{ scan.auraEnergy }}</p>
+                  </div>
+                  <div class="full-width-info">
+                    <label>Observations:</label>
+                    <p>{{ scan.auraLength }}</p>
+                  </div>
+                </div>
+
+                <mat-divider></mat-divider>
+
+                <!-- Consultant Info -->
+                <div class="consultant-info">
+                  <h3>Consultant Information</h3>
+                  <div class="info-grid">
+                    <div class="info-item"><label>Name:</label><span>{{ scan.consultantName }}</span></div>
+                    <div class="info-item"><label>Contact:</label><span>{{ scan.contactNos }}</span></div>
+                  </div>
+                  <div class="full-width-info"><label>Office Address:</label><p>{{ scan.officeAddress }}</p></div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                  <button mat-raised-button color="primary" [routerLink]="['/vastu-energy-scan', scan.id]" (click)="$event.stopPropagation()">
+                    <mat-icon>edit</mat-icon> Edit
+                  </button>
+                  <button mat-raised-button color="warn" (click)="deleteScan(scan.id); $event.stopPropagation();">
+                    <mat-icon>delete</mat-icon> Delete
+                  </button>
+                  <button mat-raised-button color="primary" (click)="generateReportpdf(scan); $event.stopPropagation()">
+                    <mat-icon>picture_as_pdf</mat-icon> Generate Report
+                  </button>
+                <!--  <button mat-raised-button color="accent" (click)="openEmailDialog(scan); $event.stopPropagation();">
+                    <mat-icon>email</mat-icon> Send Report
+                  </button>-->
+                </div>
+              </div>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+        <div *ngIf="scans.length === 0" class="no-records">
+          <p>No energy scan records found. Create a new scan from the form.</p>
+        </div>
+      </ng-container>
+
+      <ng-template #loading>
+        <div class="loading">
+          <p>Loading energy scans...</p>
+        </div>
+      </ng-template>
+    </mat-card-content>
+
+    <mat-card-footer>
+      <p class="sanskrit-text">समस्ता: लोका: सुखिनो भवन्तु</p>
+    </mat-card-footer>
+  </mat-card>
+
+  <!-- Email Dialog -->
+  <mat-dialog-container *ngIf="showEmailDialog">
+    <h2 mat-dialog-title>Send Report via Email</h2>
+    <form (ngSubmit)="sendReport()">
+      <mat-form-field appearance="fill">
+        <mat-label>Recipient Email</mat-label>
+        <input matInput [(ngModel)]="recipientEmail" name="email" type="email" required>
+      </mat-form-field>
+      <div mat-dialog-actions>
+        <button mat-button (click)="cancelEmail()">Cancel</button>
+        <button mat-raised-button color="primary" type="submit">Send</button>
+      </div>
+    </form>
+  </mat-dialog-container>
+</div>

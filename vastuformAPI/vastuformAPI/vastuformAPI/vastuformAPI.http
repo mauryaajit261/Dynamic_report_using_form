@@ -1,0 +1,6 @@
+@vastuformAPI_HostAddress = http://localhost:5206
+
+GET {{vastuformAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,17 @@
+<form (ngSubmit)="onSubmit()">
+    <input type="number" [(ngModel)]="vastuVisitId" name="visitId" placeholder="Enter Visit ID" required>
+    <input type="file" #fileInput (change)="onFileChange($event)" multiple required>
+    <button type="submit">Upload Images</button>
+  </form>
+  
+  <p>{{ uploadMessage }}</p>
+  
+  <button (click)="getImagesById()">Get Images by Visit ID</button>
+  
+  <div *ngIf="imageUrls.length > 0">
+    <h3>Uploaded Images:</h3>
+    <div *ngFor="let url of imageUrls">
+      <img [src]="url" alt="Uploaded Image" width="200">
+    </div>
+  </div>
+  

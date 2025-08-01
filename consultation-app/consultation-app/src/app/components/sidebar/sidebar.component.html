@@ -1,0 +1,47 @@
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="title">{{ title }}</div>
+  </div>
+  
+  <div class="sidebar-content">
+    <nav class="navigation">
+      <a routerLink="/form" routerLinkActive="active">
+        <mat-icon>add_circle</mat-icon>
+        <span>New Consultation</span>
+      </a>
+      <a routerLink="/list" routerLinkActive="active">
+        <mat-icon>list</mat-icon>
+        <span>Consultation List</span>
+      </a>
+      <a routerLink="/vastu-energy-scan" routerLinkActive="active">
+        <mat-icon>energy_savings_leaf</mat-icon>
+        <span>Vastu Energy Scan</span>
+      </a>
+      <a routerLink="/vastu-energy-scan-list" routerLinkActive="active">
+        <mat-icon>format_list_bulleted</mat-icon>
+        <span>Energy Scan List</span>
+      </a>
+      <a routerLink="/vastu-visit-form" routerLinkActive="active">
+        <mat-icon>home</mat-icon>
+        <span>Vastu Visit Form</span>
+      </a>
+      <a routerLink="/vastu-visit-list" routerLinkActive="active">
+        <mat-icon>view_list</mat-icon>
+        <span>Vastu Visit List</span>
+      </a>
+    </nav>
+
+    <div class="fee-info">
+      <h3>Consultation Fee Details:</h3>
+      <ul>
+        <li>First Consultation Fee: {{ consultationFees.firstConsultation }}</li>
+        <li>Within 1 Month: {{ consultationFees.withinOneMonth }}</li>
+        <li>After 1 Month Every Consultation Fee: {{ consultationFees.afterOneMonth }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sidebar-footer">
+    <div class="footer">{{ footer }}</div>
+  </div>
+</div>

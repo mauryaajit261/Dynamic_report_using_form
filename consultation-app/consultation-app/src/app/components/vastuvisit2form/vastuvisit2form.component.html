@@ -1,0 +1,152 @@
+<form [formGroup]="visitForm" (ngSubmit)="onSubmit()">
+    <!-- Basic Info -->
+    <div>
+      <label for="visitDateTime">Visit Date & Time</label>
+      <input id="visitDateTime" formControlName="visitDateTime" type="datetime-local" />
+    </div>
+  
+    <!-- Client Info -->
+    <div>
+      <label for="clientName">Client Name</label>
+      <input id="clientName" formControlName="clientName" type="text" />
+    </div>
+    <div>
+      <label for="address">Address</label>
+      <input id="address" formControlName="address" type="text" />
+    </div>
+    <div>
+      <label for="areaPinCode">Area Pin Code</label>
+      <input id="areaPinCode" formControlName="areaPinCode" type="text" />
+    </div>
+    <div>
+      <label for="contactNo">Contact No</label>
+      <input id="contactNo" formControlName="contactNo" type="text" />
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input id="email" formControlName="email" type="email" />
+    </div>
+  
+    <!-- Building Info -->
+    <div>
+      <label for="buildingName">Building Name</label>
+      <input id="buildingName" formControlName="buildingName" type="text" />
+    </div>
+    <div>
+      <label for="yearOfConstruction">Year of Construction</label>
+      <input id="yearOfConstruction" formControlName="yearOfConstruction" type="number" />
+    </div>
+    <div>
+      <label for="buildingType">Building Type</label>
+      <input id="buildingType" formControlName="buildingType" type="text" />
+    </div>
+    <div>
+      <label for="totalAreaSqFt">Total Area (sq.ft.)</label>
+      <input id="totalAreaSqFt" formControlName="totalAreaSqFt" type="number" />
+    </div>
+    <div>
+      <label for="constructionAreaSqFt">Construction Area (sq.ft.)</label>
+      <input id="constructionAreaSqFt" formControlName="constructionAreaSqFt" type="number" />
+    </div>
+    <div>
+      <label for="length">Length (ft.)</label>
+      <input id="length" formControlName="length" type="number" />
+    </div>
+    <div>
+      <label for="width">Width (ft.)</label>
+      <input id="width" formControlName="width" type="number" />
+    </div>
+  
+    <!-- Owner Info -->
+    <div>
+      <label for="ownerName">Owner Name</label>
+      <input id="ownerName" formControlName="ownerName" type="text" />
+    </div>
+    <div>
+      <label for="ownerDOB">Owner DOB</label>
+      <input id="ownerDOB" formControlName="ownerDOB" type="date" />
+    </div>
+    <div>
+      <label for="ownerBirthPlace">Owner Birth Place</label>
+      <input id="ownerBirthPlace" formControlName="ownerBirthPlace" type="text" />
+    </div>
+    <div>
+      <label for="ownerBirthTime">Owner Birth Time</label>
+      <input id="ownerBirthTime" formControlName="ownerBirthTime" type="time" />
+    </div>
+    <div>
+      <label for="occupation">Occupation</label>
+      <input id="occupation" formControlName="occupation" type="text" />
+    </div>
+    <div>
+      <label for="qualification">Qualification</label>
+      <input id="qualification" formControlName="qualification" type="text" />
+    </div>
+  
+    <!-- Spouse Info -->
+    <div>
+      <label for="spouseName">Spouse Name</label>
+      <input id="spouseName" formControlName="spouseName" type="text" />
+    </div>
+    <div>
+      <label for="spouseDOB">Spouse DOB</label>
+      <input id="spouseDOB" formControlName="spouseDOB" type="date" />
+    </div>
+    <div>
+      <label for="spouseBirthPlace">Spouse Birth Place</label>
+      <input id="spouseBirthPlace" formControlName="spouseBirthPlace" type="text" />
+    </div>
+    <div>
+      <label for="spouseBirthTime">Spouse Birth Time</label>
+      <input id="spouseBirthTime" formControlName="spouseBirthTime" type="time" />
+    </div>
+  
+    <!-- Family Members -->
+    <div *ngFor="let member of familyMembers.controls; let i = index">
+        <div [formGroupName]="i">
+          <input formControlName="name" placeholder="Name" />
+          <input formControlName="relation" placeholder="Relation" />
+          <input formControlName="age" placeholder="Age" />
+          <input formControlName="presentProblem" placeholder="Problem" />
+          <button type="button" (click)="removeFamilyMember(i)">Remove</button>
+        </div>
+      </div>
+      
+ 
+  
+    <!-- Vastu Details -->
+    <div>
+      <label for="specialIncident">Special Incident</label>
+      <input id="specialIncident" formControlName="specialIncident" type="text" />
+    </div>
+    <div>
+      <label for="shapeOfLand">Shape of Land</label>
+      <input id="shapeOfLand" formControlName="shapeOfLand" type="text" />
+    </div>
+    <div>
+      <label for="slopeOfLand">Slope of Land</label>
+      <input id="slopeOfLand" formControlName="slopeOfLand" type="text" />
+    </div>
+  
+    <!-- Environmental Factors -->
+    <div>
+      <label for="pit">Pit</label>
+      <input id="pit" formControlName="pit" type="text" />
+    </div>
+    <div>
+      <label for="hill">Hill</label>
+      <input id="hill" formControlName="hill" type="text" />
+    </div>
+    <div>
+      <label for="temple">Temple</label>
+      <input id="temple" formControlName="temple" type="text" />
+    </div>
+    <div>
+      <label for="publicPlace">Public Place</label>
+      <input id="publicPlace" formControlName="publicPlace" type="text" />
+    </div>
+  
+    <!-- Submit Button -->
+    <button type="submit">Submit</button>
+  </form>
+  
